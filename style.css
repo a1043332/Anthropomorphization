@@ -1,0 +1,66 @@
+.questionArea{
+    width: 1024px;
+    height: 668px;
+    background-color: black;
+    border: 1px solid #000;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+.pictureArea{
+    width: 338px;
+    height: 600px;
+    background-color: #e27802;
+    border: 1px solid #e27802;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.thankYou{
+    font-family:Microsoft JhengHei;
+    font-weight:bold;
+    width: 250px;
+    height: 100px;
+    background-color: #f6c065;
+    border: 1px solid #f6c065;
+    border-radius: 10px;
+    text-align:center;
+    line-height:100px;
+    margin: 0 auto;
+    margin-top: 240px;
+}
+.btnStart{
+    margin-top:80%;
+    margin-left: 38%;
+}
+.mainPicture{
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin:  auto;
+    
+}
+.answerArea{
+    width: 1024px;
+    height: 80px;
+    background-color: #58391c;
+    border: 1px solid #58391c;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin: 0 auto;    
+}
+.btnYes{
+    width: 60px;
+    height: 40px;
+    margin-left: 39% ;
+    margin-top:2%;
+    display: none;
+}
+.btnNo{
+    width: 60px;
+    height: 40px;
+    margin-left: 10% ;
+    margin-top: 2%;
+    display: none;
+}
