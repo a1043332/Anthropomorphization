@@ -18,17 +18,18 @@
     margin-top: 30px;
 }
 .thankYou{
-    font-family:Microsoft JhengHei;
-    font-weight:bold;
+    
     width: 250px;
     height: 100px;
     background-color: #f6c065;
     border: 1px solid #f6c065;
     border-radius: 10px;
-    text-align:center;
-    line-height:100px;
     margin: 0 auto;
     margin-top: 240px;
+    font-family:Microsoft JhengHei;
+    font-weight:bold;
+    text-align:center;
+    line-height:100px;
 }
 .btnStart{
     margin-top:80%;
@@ -63,4 +64,130 @@
     margin-left: 10% ;
     margin-top: 2%;
     display: none;
+}
+
+
+.textArea{
+    width: 750px;
+    height: 562px;
+    background:black;
+    border: 1px solid black;
+    margin: 0 auto;
+    margin-top: 5%;
+    border-radius: 10px;
+
+}
+
+.textTitle{
+    width: 720px;
+    height: 110px;
+    background:#cfdac8;
+    border: 1px solid #cfdac8;
+    margin: 0 auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-family:Microsoft JhengHei;
+    font-weight:bold;
+    text-align:center;
+    line-height:110px;
+    font-size: 22px;
+    
+}
+.recommendClass{
+    width: 720px;
+    height: 110px;
+    background: #e8eae6;
+    border: 1px solid #e8eae6;
+    margin: 0 auto;
+
+    
+    
+    
+}
+.recommendImg{
+    width: 100px;
+    height: 100px;
+    float: left;
+}
+.recommendText{
+    padding-top: 5%;
+    padding-left: 18%;
+    width: 650px;
+    height: 100px;
+    font-family:Microsoft JhengHei;
+    font-weight:bold;
+    text-align:left;
+    font-size: 16px;
+   
+}
+.recommenderPic{
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin:  auto;
+}
+.textFooter{
+    width: 720px;
+    height: 110px;
+    padding-top: 3%;
+    padding-left: 3%;
+    padding-right: 3%;
+    background: #cdd0cb;
+    border: 1px solid#cdd0cb;
+    margin: 0 auto;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-family:Microsoft JhengHei;
+    font-weight:bold;
+    text-align:left;
+    font-size: 18px;
+    
+    
+}
+.clear{
+    clear: both;
+}
+.btnNext{
+    float: right;
+    width: 120px;
+    height: 40px;
+    margin-right: 13% ;
+    margin-top:2%;
+}
+
+.topTitle{
+    width: 750px;
+    height: 80px;
+    background-color: #cfdac8;
+    border: 1px solid #cfdac8;
+    border-radius: 10px;
+    font-family:Microsoft JhengHei;
+    font-weight:bold;
+    text-align:center;
+    line-height:80px;
+    font-size: 26px;
+}
+.examplePic{
+    margin-top: 5%;
+    float: left;
+    width: 33.3333%;
+    height: 440px;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.exampleImg{
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin:  auto;
+}
+.stepDescription{
+    width: 70%;
+    height: 440px;
+    margin: 0 auto;
+    margin-top: 7%;
+}
+.list-group-item{
+    font-size: 20px;
 }
