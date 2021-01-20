@@ -1,3 +1,6 @@
+body{
+    font-family:Microsoft JhengHei;
+}
 .questionArea{
     width: 1024px;
     height: 668px;
@@ -26,7 +29,6 @@
     border-radius: 10px;
     margin: 0 auto;
     margin-top: 240px;
-    font-family:Microsoft JhengHei;
     font-weight:bold;
     text-align:center;
     line-height:100px;
@@ -86,7 +88,6 @@
     margin: 0 auto;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    font-family:Microsoft JhengHei;
     font-weight:bold;
     text-align:center;
     line-height:110px;
@@ -114,7 +115,6 @@
     padding-left: 18%;
     width: 650px;
     height: 100px;
-    font-family:Microsoft JhengHei;
     font-weight:bold;
     text-align:left;
     font-size: 16px;
@@ -137,7 +137,6 @@
     margin: 0 auto;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    font-family:Microsoft JhengHei;
     font-weight:bold;
     text-align:left;
     font-size: 18px;
@@ -161,7 +160,6 @@
     background-color: #cfdac8;
     border: 1px solid #cfdac8;
     border-radius: 10px;
-    font-family:Microsoft JhengHei;
     font-weight:bold;
     text-align:center;
     line-height:80px;
