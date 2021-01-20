@@ -2,7 +2,7 @@ var questionsNum = 5;
 var picturesList = getRandomList(questionsNum);
 var questionsCount = 0;
 var yesCount = 0;
-var yesCount = 0;
+var noCount = 0;
 
 function start() {
     questionsCount++;
@@ -12,6 +12,7 @@ function start() {
     mainPicture.innerHTML = '<img src="pictures/main' + picturesList[questionsCount - 1] + '.png" class="mainPicture" alt=""> ';
 }
 function sayYes() {
+    yesCount++;
     questionsCount++;
     var mainPicture = document.querySelector('.pictureArea');
     if (questionsCount <= questionsNum) {
@@ -25,6 +26,7 @@ function sayYes() {
 
 }
 function sayNo() {
+    noCount++;
     questionsCount++;
     var mainPicture = document.querySelector('.pictureArea');
     if (questionsCount <= questionsNum) {
@@ -37,10 +39,11 @@ function sayNo() {
     }
 }
 
-function getRandom(x) {
-    return Math.floor(Math.random() * x);
-};
 
+
+
+
+//其他會用到的函數
 function getRandomList(x) {
     randomList = [];
     tmp_randomList = [];
@@ -56,3 +59,6 @@ function getRandomList(x) {
     }
     return randomList;
 }
+function getRandom(x) {
+    return Math.floor(Math.random() * x);
+};
