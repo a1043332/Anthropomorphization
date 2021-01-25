@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <button>123</button>
+
+    <script>
+        let sendButton = document.querySelector('button');
+
+        function send() {
+            // let name = document.querySelector('#nameValue').value;
+            // let phone = document.querySelector('#phoneValue').value;
+            // let demand = document.querySelector('#demandValue').value;
+            $.ajax({
+                url: "https://script.google.com/macros/s/AKfycbwfA3JR9FXgftsdqheKGGXGc1iCnJ7s1UlFDNP7b6n_HJTWL2Bcr8yhQA/exec",
+                data: {
+                    "name": 'name2',
+                    "phone": 'phone3',
+                    "demand": 'demand4'
+                },
+                success: function (response) {
+                    if (response == "成功") {
+                        alert("成功");
+                    }
+                },
+            });
+        };
+
+        sendButton.addEventListener('click', send);
+    </script>
+</body>
+
+</html>
