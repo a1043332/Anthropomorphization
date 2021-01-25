@@ -13,6 +13,7 @@
        https://developers.google.com/sheets/api/quickstart/js#step_2_set_up_the_sample
     -->
     <script>
+    var abc;
     function makeApiCall() {
       var params = {
         // The spreadsheet to request.
@@ -30,6 +31,7 @@
       request.then(function(response) {
         // TODO: Change code below to process the `response` object:
         console.log(response.result);
+        abc = response;
       }, function(reason) {
         console.error('error: ' + reason.result.error.message);
       });
