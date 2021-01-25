@@ -70,8 +70,6 @@ body{
     margin-top: 2%;
     display: none;
 }
-
-
 .textArea{
     width: 750px;
     height: 562px;
@@ -80,9 +78,7 @@ body{
     margin: 0 auto;
     margin-top: 5%;
     border-radius: 10px;
-
 }
-
 .textTitle{
     width: 720px;
     height: 110px;
@@ -94,19 +90,14 @@ body{
     font-weight:bold;
     text-align:center;
     line-height:110px;
-    font-size: 22px;
-    
+    font-size: 22px;   
 }
 .recommendClass{
     width: 720px;
     height: 110px;
     background: #e8eae6;
     border: 1px solid #e8eae6;
-    margin: 0 auto;
-
-    
-    
-    
+    margin: 0 auto;   
 }
 .recommendImg{
     width: 100px;
@@ -121,8 +112,7 @@ body{
     height: 100px;
     font-weight:bold;
     text-align:left;
-    font-size: 16px;
-   
+    font-size: 16px;  
 }
 .recommenderPic{
     max-width: 100%;
@@ -143,9 +133,7 @@ body{
     border-bottom-right-radius: 10px;
     font-weight:bold;
     text-align:left;
-    font-size: 18px;
-    
-    
+    font-size: 18px;  
 }
 .clear{
     clear: both;
@@ -157,7 +145,6 @@ body{
     margin-right: 13% ;
     margin-top:2%;
 }
-
 .topTitle{
     width: 750px;
     height: 80px;
@@ -239,8 +226,7 @@ body{
     margin-left: 2% ;
     margin-top:2%;
     float: left;
-    display: none;
-   
+    display: none;  
 }
 .buyText1{
     width: 100px;
