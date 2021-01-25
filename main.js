@@ -19,7 +19,7 @@ function sayYes() {
         mainPicture.innerHTML = '<img src="pictures/main' + picturesList[questionsCount - 1] + '.png" class="mainPicture" alt=""> ';
     }
     else {
-        mainPicture.innerHTML = '<div class="thankYou" onclick=';window.location.href="index.html";'>謝謝您的幫忙~</div>';
+        mainPicture.innerHTML = '<div class="thankYou" onclick="window.location.href="index.html";">謝謝您的幫忙~</div>';
         $(".btnYes").hide();
         $(".btnNo").hide();
     }
@@ -33,7 +33,7 @@ function sayNo() {
         mainPicture.innerHTML = '<img src="pictures/main' + picturesList[questionsCount - 1] + '.png" class="mainPicture" alt=""> ';
     }
     else {
-        mainPicture.innerHTML = '<div class="thankYou" onclick=';window.location.href="index.html";'>謝謝您的幫忙~</div>';
+        mainPicture.innerHTML = '<div class="thankYou" onclick="window.location.href="index.html";">謝謝您的幫忙~</div>';
         $(".btnYes").hide();
         $(".btnNo").hide();
     }
