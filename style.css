@@ -199,6 +199,7 @@ body{
     margin-left: 2% ;
     margin-top:2%;
     float: left;
+    display: none;
 }
 .btn2{
     width: 70px;
@@ -206,6 +207,7 @@ body{
     margin-left: 2% ;
     margin-top:2%;
     float: left;
+    display: none;
 }
 .btn3{
     width: 70px;
@@ -213,6 +215,7 @@ body{
     margin-left: 2% ;
     margin-top:2%;
     float: left;
+    display: none;
 }
 .btn4{
     width: 70px;
@@ -220,6 +223,7 @@ body{
     margin-left: 2% ;
     margin-top:2%; 
     float: left;
+    display: none;
 }
 .btn5{
     width: 70px;
@@ -227,6 +231,7 @@ body{
     margin-left: 2% ;
     margin-top:2%;
     float: left;
+    display: none;
 }
 .btn6{
     width: 70px;
@@ -234,20 +239,20 @@ body{
     margin-left: 2% ;
     margin-top:2%;
     float: left;
+    display: none;
    
 }
 .buyText1{
     width: 100px;
     height: 40px;
-    margin-left: 12.5% ;  
+    margin-left: 11.6% ;  
     margin-top:2%;
     line-height: 40px;
     float: left;
     color: white;
+    display: none;
 }
 .buyText2{
-
-    display: inline;
     width: 100px;
     height: 40px;
     margin-left: 2% ;
@@ -255,4 +260,5 @@ body{
     line-height: 40px;
     float: left;
     color: white;
+    display: none;
 }

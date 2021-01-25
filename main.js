@@ -6,7 +6,7 @@ var btn1Count= 0,btn2Count= 0,btn3Count= 0,btn4Count= 0,btn5Count= 0,btn6Count =
 
 function start() {
     questionsCount++;
-    $(".buyText").show();$(".btn1").show(); $(".btn2").show();$(".btn3").show(); $(".btn4").show();$(".btn5").show(); $(".btn6").show(); 
+    $(".buyText1").show();$(".buyText2").show();$(".btn1").show(); $(".btn2").show();$(".btn3").show(); $(".btn4").show();$(".btn5").show(); $(".btn6").show(); 
     var mainPicture = document.querySelector('.pictureArea');
     mainPicture.innerHTML = '<img src="pictures/main' + picturesList[questionsCount - 1] + '.png" class="mainPicture" alt=""> ';
 }
@@ -46,7 +46,7 @@ function say1() {
     }
     else {
         mainPicture.innerHTML = '<div class="thankYou" onclick="backToHome()">謝謝您的幫忙~</div>';
-        $(".btn1").hide();$(".btn2").hide();$(".btn3").hide();$(".btn4").hide();$(".btn5").hide();$(".btn6").hide();    
+        $(".buyText1").hide();$(".buyText2").hide();$(".btn1").hide();$(".btn2").hide();$(".btn3").hide();$(".btn4").hide();$(".btn5").hide();$(".btn6").hide();    
     }
 
 }
@@ -59,7 +59,7 @@ function say2() {
     }
     else {
         mainPicture.innerHTML = '<div class="thankYou" onclick="backToHome()">謝謝您的幫忙~</div>';
-        $(".btn1").hide();$(".btn2").hide();$(".btn3").hide();$(".btn4").hide();$(".btn5").hide();$(".btn6").hide();  
+        $(".buyText1").hide();$(".buyText2").hide();$(".btn1").hide();$(".btn2").hide();$(".btn3").hide();$(".btn4").hide();$(".btn5").hide();$(".btn6").hide();  
     }
 }
 function say3() {
@@ -71,7 +71,7 @@ function say3() {
     }
     else {
         mainPicture.innerHTML = '<div class="thankYou" onclick="backToHome()">謝謝您的幫忙~</div>';
-        $(".btn1").hide();$(".btn2").hide();$(".btn3").hide();$(".btn4").hide();$(".btn5").hide();$(".btn6").hide();    
+        $(".buyText1").hide();$(".buyText2").hide();$(".btn1").hide();$(".btn2").hide();$(".btn3").hide();$(".btn4").hide();$(".btn5").hide();$(".btn6").hide();    
     }
 
 }
@@ -84,7 +84,7 @@ function say4() {
     }
     else {
         mainPicture.innerHTML = '<div class="thankYou" onclick="backToHome()">謝謝您的幫忙~</div>';
-        $(".btn1").hide();$(".btn2").hide();$(".btn3").hide();$(".btn4").hide();$(".btn5").hide();$(".btn6").hide();  
+        $(".buyText1").hide();$(".buyText2").hide();$(".btn1").hide();$(".btn2").hide();$(".btn3").hide();$(".btn4").hide();$(".btn5").hide();$(".btn6").hide();  
     }
 }
 function say5() {
@@ -96,7 +96,7 @@ function say5() {
     }
     else {
         mainPicture.innerHTML = '<div class="thankYou" onclick="backToHome()">謝謝您的幫忙~</div>';
-        $(".btn1").hide();$(".btn2").hide();$(".btn3").hide();$(".btn4").hide();$(".btn5").hide();$(".btn6").hide();    
+        $(".buyText1").hide();$(".buyText2").hide();$(".btn1").hide();$(".btn2").hide();$(".btn3").hide();$(".btn4").hide();$(".btn5").hide();$(".btn6").hide();    
     }
 
 }
@@ -109,7 +109,7 @@ function say6() {
     }
     else {
         mainPicture.innerHTML = '<div class="thankYou" onclick="backToHome()">謝謝您的幫忙~</div>';
-        $(".btn1").hide();$(".btn2").hide();$(".btn3").hide();$(".btn4").hide();$(".btn5").hide();$(".btn6").hide();  
+        $(".buyText1").hide();$(".buyText2").hide();$(".btn1").hide();$(".btn2").hide();$(".btn3").hide();$(".btn4").hide();$(".btn5").hide();$(".btn6").hide();  
     }
 }
 
