@@ -36,6 +36,29 @@
         console.error('error: ' + reason.result.error.message);
       });
     }
+    function writeS(x) {
+    return gapi.client.sheets.spreadsheets.values.update({
+      "spreadsheetId": "1DEedctzbug9uQyx96sLlPZIP3cW2dpMiCLx_Gig1wbc",
+      "range": "A1:E5",
+      "valueInputOption": "USER_ENTERED",
+      "resource": {
+        "values": [
+          [
+            x,
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        ]
+      }
+    })
+        .then(function(response) {
+                // Handle the results here (response.result has the parsed body).
+                console.log("Response", response);
+              },
+              function(err) { console.error("Execute error", err); });
+  }
    
 
     function initClient() {
