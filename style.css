@@ -193,3 +193,66 @@ body{
 .list-group-item{
     font-size: 20px;
 }
+.btn1{
+    width: 70px;
+    height: 40px;
+    margin-left: 2% ;
+    margin-top:2%;
+    float: left;
+}
+.btn2{
+    width: 70px;
+    height: 40px;
+    margin-left: 2% ;
+    margin-top:2%;
+    float: left;
+}
+.btn3{
+    width: 70px;
+    height: 40px;
+    margin-left: 2% ;
+    margin-top:2%;
+    float: left;
+}
+.btn4{
+    width: 70px;
+    height: 40px;
+    margin-left: 2% ;
+    margin-top:2%; 
+    float: left;
+}
+.btn5{
+    width: 70px;
+    height: 40px;
+    margin-left: 2% ;
+    margin-top:2%;
+    float: left;
+}
+.btn6{
+    width: 70px;
+    height: 40px;
+    margin-left: 2% ;
+    margin-top:2%;
+    float: left;
+   
+}
+.buyText1{
+    width: 100px;
+    height: 40px;
+    margin-left: 12.5% ;  
+    margin-top:2%;
+    line-height: 40px;
+    float: left;
+    color: white;
+}
+.buyText2{
+
+    display: inline;
+    width: 100px;
+    height: 40px;
+    margin-left: 2% ;
+    margin-top:2%;
+    line-height: 40px;
+    float: left;
+    color: white;
+}

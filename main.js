@@ -1,13 +1,12 @@
 var questionsNum = 5;
 var picturesList = getRandomList(questionsNum);
 var questionsCount = 0;
-var yesCount = 0;
-var noCount = 0;
+var yesCount = 0,noCount = 0;
+var btn1Count= 0,btn2Count= 0,btn3Count= 0,btn4Count= 0,btn5Count= 0,btn6Count = 0;
 
 function start() {
     questionsCount++;
-    $(".btnYes").show();
-    $(".btnNo").show();
+    $(".buyText").show();$(".btn1").show(); $(".btn2").show();$(".btn3").show(); $(".btn4").show();$(".btn5").show(); $(".btn6").show(); 
     var mainPicture = document.querySelector('.pictureArea');
     mainPicture.innerHTML = '<img src="pictures/main' + picturesList[questionsCount - 1] + '.png" class="mainPicture" alt=""> ';
 }
@@ -35,9 +34,87 @@ function sayNo() {
     else {
         mainPicture.innerHTML = '<div class="thankYou" onclick="backToHome()">謝謝您的幫忙~</div>';
         $(".btnYes").hide();
-        $(".btnNo").hide();
+        $(".btnNo").hide();      
     }
 }
+function say1() {
+    btn1Count++;
+    questionsCount++;
+    var mainPicture = document.querySelector('.pictureArea');
+    if (questionsCount <= questionsNum) {
+        mainPicture.innerHTML = '<img src="pictures/main' + picturesList[questionsCount - 1] + '.png" class="mainPicture" alt=""> ';
+    }
+    else {
+        mainPicture.innerHTML = '<div class="thankYou" onclick="backToHome()">謝謝您的幫忙~</div>';
+        $(".btn1").hide();$(".btn2").hide();$(".btn3").hide();$(".btn4").hide();$(".btn5").hide();$(".btn6").hide();    
+    }
+
+}
+function say2() {
+    btn2Count++;
+    questionsCount++;
+    var mainPicture = document.querySelector('.pictureArea');
+    if (questionsCount <= questionsNum) {
+        mainPicture.innerHTML = '<img src="pictures/main' + picturesList[questionsCount - 1] + '.png" class="mainPicture" alt=""> ';
+    }
+    else {
+        mainPicture.innerHTML = '<div class="thankYou" onclick="backToHome()">謝謝您的幫忙~</div>';
+        $(".btn1").hide();$(".btn2").hide();$(".btn3").hide();$(".btn4").hide();$(".btn5").hide();$(".btn6").hide();  
+    }
+}
+function say3() {
+    btn3Count++;
+    questionsCount++;
+    var mainPicture = document.querySelector('.pictureArea');
+    if (questionsCount <= questionsNum) {
+        mainPicture.innerHTML = '<img src="pictures/main' + picturesList[questionsCount - 1] + '.png" class="mainPicture" alt=""> ';
+    }
+    else {
+        mainPicture.innerHTML = '<div class="thankYou" onclick="backToHome()">謝謝您的幫忙~</div>';
+        $(".btn1").hide();$(".btn2").hide();$(".btn3").hide();$(".btn4").hide();$(".btn5").hide();$(".btn6").hide();    
+    }
+
+}
+function say4() {
+    btn4Count++;
+    questionsCount++;
+    var mainPicture = document.querySelector('.pictureArea');
+    if (questionsCount <= questionsNum) {
+        mainPicture.innerHTML = '<img src="pictures/main' + picturesList[questionsCount - 1] + '.png" class="mainPicture" alt=""> ';
+    }
+    else {
+        mainPicture.innerHTML = '<div class="thankYou" onclick="backToHome()">謝謝您的幫忙~</div>';
+        $(".btn1").hide();$(".btn2").hide();$(".btn3").hide();$(".btn4").hide();$(".btn5").hide();$(".btn6").hide();  
+    }
+}
+function say5() {
+    btn5Count++;
+    questionsCount++;
+    var mainPicture = document.querySelector('.pictureArea');
+    if (questionsCount <= questionsNum) {
+        mainPicture.innerHTML = '<img src="pictures/main' + picturesList[questionsCount - 1] + '.png" class="mainPicture" alt=""> ';
+    }
+    else {
+        mainPicture.innerHTML = '<div class="thankYou" onclick="backToHome()">謝謝您的幫忙~</div>';
+        $(".btn1").hide();$(".btn2").hide();$(".btn3").hide();$(".btn4").hide();$(".btn5").hide();$(".btn6").hide();    
+    }
+
+}
+function say6() {
+    btn6Count++;
+    questionsCount++;
+    var mainPicture = document.querySelector('.pictureArea');
+    if (questionsCount <= questionsNum) {
+        mainPicture.innerHTML = '<img src="pictures/main' + picturesList[questionsCount - 1] + '.png" class="mainPicture" alt=""> ';
+    }
+    else {
+        mainPicture.innerHTML = '<div class="thankYou" onclick="backToHome()">謝謝您的幫忙~</div>';
+        $(".btn1").hide();$(".btn2").hide();$(".btn3").hide();$(".btn4").hide();$(".btn5").hide();$(".btn6").hide();  
+    }
+}
+
+
+
 
 
 function nextStep1(){
