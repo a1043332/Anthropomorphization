@@ -46,6 +46,7 @@ function say1() {
     else {
         mainPicture.innerHTML = '<div class="thankYou" onclick="backToHome()">謝謝您的幫忙~</div>';
         $(".buyText1").hide(); $(".buyText2").hide(); $(".btn1").hide(); $(".btn2").hide(); $(".btn3").hide(); $(".btn4").hide(); $(".btn5").hide(); $(".btn6").hide();
+        sendSheet()
     }
 }
 function say2() {
@@ -58,6 +59,7 @@ function say2() {
     else {
         mainPicture.innerHTML = '<div class="thankYou" onclick="backToHome()">謝謝您的幫忙~</div>';
         $(".buyText1").hide(); $(".buyText2").hide(); $(".btn1").hide(); $(".btn2").hide(); $(".btn3").hide(); $(".btn4").hide(); $(".btn5").hide(); $(".btn6").hide();
+        sendSheet()
     }
 }
 function say3() {
@@ -70,6 +72,7 @@ function say3() {
     else {
         mainPicture.innerHTML = '<div class="thankYou" onclick="backToHome()">謝謝您的幫忙~</div>';
         $(".buyText1").hide(); $(".buyText2").hide(); $(".btn1").hide(); $(".btn2").hide(); $(".btn3").hide(); $(".btn4").hide(); $(".btn5").hide(); $(".btn6").hide();
+        sendSheet()
     }
 }
 function say4() {
@@ -82,6 +85,7 @@ function say4() {
     else {
         mainPicture.innerHTML = '<div class="thankYou" onclick="backToHome()">謝謝您的幫忙~</div>';
         $(".buyText1").hide(); $(".buyText2").hide(); $(".btn1").hide(); $(".btn2").hide(); $(".btn3").hide(); $(".btn4").hide(); $(".btn5").hide(); $(".btn6").hide();
+        sendSheet()
     }
 }
 function say5() {
@@ -94,6 +98,7 @@ function say5() {
     else {
         mainPicture.innerHTML = '<div class="thankYou" onclick="backToHome()">謝謝您的幫忙~</div>';
         $(".buyText1").hide(); $(".buyText2").hide(); $(".btn1").hide(); $(".btn2").hide(); $(".btn3").hide(); $(".btn4").hide(); $(".btn5").hide(); $(".btn6").hide();
+        sendSheet()
     }
 }
 function say6() {
@@ -106,6 +111,7 @@ function say6() {
     else {
         mainPicture.innerHTML = '<div class="thankYou" onclick="backToHome()">謝謝您的幫忙~</div>';
         $(".buyText1").hide(); $(".buyText2").hide(); $(".btn1").hide(); $(".btn2").hide(); $(".btn3").hide(); $(".btn4").hide(); $(".btn5").hide(); $(".btn6").hide();
+        sendSheet()
     }
 }
 
