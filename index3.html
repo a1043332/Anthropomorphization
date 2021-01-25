@@ -10,20 +10,22 @@
 
 <body>
     <button>123</button>
-
+    <input type="text" id="nameValue">
+    <input type="text" id="phoneValue">
+    <input type="text" id="demandValue">
     <script>
         let sendButton = document.querySelector('button');
 
         function send() {
-            // let name = document.querySelector('#nameValue').value;
-            // let phone = document.querySelector('#phoneValue').value;
-            // let demand = document.querySelector('#demandValue').value;
+            let name = document.querySelector('#nameValue').value;
+            let phone = document.querySelector('#phoneValue').value;
+            let demand = document.querySelector('#demandValue').value;
             $.ajax({
                 url: "https://script.google.com/macros/s/AKfycbwfA3JR9FXgftsdqheKGGXGc1iCnJ7s1UlFDNP7b6n_HJTWL2Bcr8yhQA/exec",
                 data: {
-                    "name": 'name2',
-                    "phone": 'phone3',
-                    "demand": 'demand4'
+                    "name": name,
+                    "phone": phone,
+                    "demand": demand
                 },
                 success: function (response) {
                     if (response == "成功") {
