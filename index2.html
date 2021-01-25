@@ -38,7 +38,7 @@
                 console.error('error: ' + reason.result.error.message);
             });
         }
-        function writeS(x) {
+        function writeS() {
             return gapi.client.sheets.spreadsheets.values.update({
                 "spreadsheetId": "1DEedctzbug9uQyx96sLlPZIP3cW2dpMiCLx_Gig1wbc",
                 "range": "A1:E5",
