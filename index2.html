@@ -13,10 +13,10 @@
        https://developers.google.com/sheets/api/quickstart/js#step_2_set_up_the_sample
     -->
     <script>
-    function makeApiCall() {
+    function makeApiCall(x) {
       var params = {
         // The spreadsheet to request.
-        spreadsheetId: '1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms',  // TODO: Update placeholder value.
+        spreadsheetId: x,  // TODO: Update placeholder value.
 
         // The ranges to retrieve from the spreadsheet.
         ranges: ['A1:D1'],  // TODO: Update placeholder value.
@@ -51,7 +51,7 @@
       gapi.client.init({
         'apiKey': 'AIzaSyCIpwxg-O7Pupyyocisjmvlbi51z72wX5o',
         'clientId': '782171272022-afpn0ge0padsh2v1mcc1h2j3vdfdrjj7.apps.googleusercontent.com',
-        'scope': ['https://www.googleapis.com/auth/drive','https://www.googleapis.com/auth/spreadsheets'],
+        'scope': 'https://www.googleapis.com/auth/spreadsheets',
         'discoveryDocs': ['https://sheets.googleapis.com/$discovery/rest?version=v4'],
       }).then(function() {
         gapi.auth2.getAuthInstance().isSignedIn.listen(updateSignInStatus);
