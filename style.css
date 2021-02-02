@@ -1,7 +1,8 @@
-body{
-    font-family:Microsoft JhengHei;
+body {
+    font-family: Microsoft JhengHei;
 }
-.questionArea{
+
+.questionArea {
     width: 1024px;
     height: 668px;
     background-color: black;
@@ -11,7 +12,8 @@ body{
     margin: 0 auto;
     margin-top: 10px;
 }
-.pictureArea{
+
+.pictureArea {
     width: 338px;
     height: 600px;
     background-color: black;
@@ -20,8 +22,9 @@ body{
     margin: 0 auto;
     margin-top: 30px;
 }
-.thankYou{
-    
+
+.thankYou {
+
     width: 250px;
     height: 100px;
     background-color: #f6c065;
@@ -29,98 +32,110 @@ body{
     border-radius: 10px;
     margin: 0 auto;
     margin-top: 240px;
-    font-weight:bold;
-    text-align:center;
-    line-height:100px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 100px;
     font-size: 20px;
 }
-.btnStart{
+
+.btnStart {
     font-size: 28px;
     display: block;
     margin: 0 auto;
-    margin-top:80%;
+    margin-top: 80%;
 }
-.mainPicture{
+
+.mainPicture {
     max-width: 100%;
     max-height: 100%;
     display: block;
-    margin:  auto;
-    
+    margin: auto;
+
 }
-.answerArea{
+
+.answerArea {
     width: 1024px;
     height: 80px;
     background-color: #58391c;
     border: 1px solid #58391c;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    margin: 0 auto;    
+    margin: 0 auto;
 }
-.btnYes{
+
+.btnYes {
     width: 60px;
     height: 40px;
-    margin-left: 39% ;
-    margin-top:2%;
-    display: none;
-}
-.btnNo{
-    width: 60px;
-    height: 40px;
-    margin-left: 10% ;
+    margin-left: 39%;
     margin-top: 2%;
     display: none;
 }
-.textArea{
+
+.btnNo {
+    width: 60px;
+    height: 40px;
+    margin-left: 10%;
+    margin-top: 2%;
+    display: none;
+}
+
+.textArea {
     width: 750px;
     height: 562px;
-    background:black;
+    background: black;
     border: 1px solid black;
     margin: 0 auto;
     margin-top: 5%;
     border-radius: 10px;
 }
-.textTitle{
+
+.textTitle {
     width: 720px;
     height: 110px;
-    background:#cfdac8;
+    background: #cfdac8;
     border: 1px solid #cfdac8;
     margin: 0 auto;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    font-weight:bold;
-    text-align:center;
-    line-height:110px;
-    font-size: 22px;   
+    font-weight: bold;
+    text-align: center;
+    line-height: 110px;
+    font-size: 22px;
 }
-.recommendClass{
+
+.recommendClass {
     width: 720px;
-    height: 110px;
+    height: 140px;
     background: #e8eae6;
     border: 1px solid #e8eae6;
-    margin: 0 auto;   
+    margin: 0 auto;
 }
-.recommendImg{
+
+.recommendImg {
     width: 100px;
     height: 100px;
     float: left;
     margin-left: 3%;
 }
-.recommendText{
+
+.recommendText {
     padding-top: 5%;
     padding-left: 19%;
     width: 650px;
     height: 100px;
-    font-weight:bold;
-    text-align:left;
-    font-size: 16px;  
+    font-weight: bold;
+    text-align: left;
+    font-size: 16px;
 }
-.recommenderPic{
+
+.recommenderPic {
     max-width: 100%;
     max-height: 100%;
     display: block;
-    margin:  auto;
+    margin: auto;
 }
-.textFooter{
+
+.textFooter {
     width: 720px;
     height: 110px;
     padding-top: 2%;
@@ -131,32 +146,53 @@ body{
     margin: 0 auto;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    font-weight:bold;
-    text-align:left;
-    font-size: 18px;  
+    font-weight: bold;
+    text-align: left;
+    font-size: 18px;
 }
-.clear{
+
+.textFooter2 {
+    width: 720px;
+    height: 400px;
+    padding-top: 10%;
+    padding-left: 10%;
+    padding-right: 5%;
+    background: #cdd0cb;
+    border: 1px solid#cdd0cb;
+    margin: 0 auto;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-weight: bold;
+    text-align: left;
+    font-size: 20px;
+}
+
+
+.clear {
     clear: both;
 }
-.btnNext{
+
+.btnNext {
     float: right;
     width: 120px;
     height: 40px;
-    margin-right: 13% ;
-    margin-top:2%;
+    margin-right: 13%;
+    margin-top: 2%;
 }
-.topTitle{
+
+.topTitle {
     width: 750px;
     height: 80px;
     background-color: #cfdac8;
     border: 1px solid #cfdac8;
     border-radius: 10px;
-    font-weight:bold;
-    text-align:center;
-    line-height:80px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 80px;
     font-size: 26px;
 }
-.examplePic{
+
+.examplePic {
     margin-top: 5%;
     float: left;
     width: 33.3333%;
@@ -165,84 +201,95 @@ body{
     border: 1px solid black;
     border-radius: 10px;
 }
-.exampleImg{
+
+.exampleImg {
     max-width: 100%;
     max-height: 100%;
     display: block;
-    margin:  auto;
+    margin: auto;
 }
-.stepDescription{
+
+.stepDescription {
     width: 70%;
     height: 440px;
     margin: 0 auto;
     margin-top: 7%;
 }
-.list-group-item{
+
+.list-group-item {
     font-size: 20px;
 }
-.btn1{
+
+.btn1 {
     width: 70px;
     height: 40px;
-    margin-left: 2% ;
-    margin-top:2%;
+    margin-left: 2%;
+    margin-top: 2%;
     float: left;
     display: none;
 }
-.btn2{
+
+.btn2 {
     width: 70px;
     height: 40px;
-    margin-left: 2% ;
-    margin-top:2%;
+    margin-left: 2%;
+    margin-top: 2%;
     float: left;
     display: none;
 }
-.btn3{
+
+.btn3 {
     width: 70px;
     height: 40px;
-    margin-left: 2% ;
-    margin-top:2%;
+    margin-left: 2%;
+    margin-top: 2%;
     float: left;
     display: none;
 }
-.btn4{
+
+.btn4 {
     width: 70px;
     height: 40px;
-    margin-left: 2% ;
-    margin-top:2%; 
+    margin-left: 2%;
+    margin-top: 2%;
     float: left;
     display: none;
 }
-.btn5{
+
+.btn5 {
     width: 70px;
     height: 40px;
-    margin-left: 2% ;
-    margin-top:2%;
+    margin-left: 2%;
+    margin-top: 2%;
     float: left;
     display: none;
 }
-.btn6{
+
+.btn6 {
     width: 70px;
     height: 40px;
-    margin-left: 2% ;
-    margin-top:2%;
+    margin-left: 2%;
+    margin-top: 2%;
     float: left;
-    display: none;  
+    display: none;
 }
-.buyText1{
+
+.buyText1 {
     width: 100px;
     height: 40px;
-    margin-left: 11.6% ;  
-    margin-top:2%;
+    margin-left: 11.6%;
+    margin-top: 2%;
     line-height: 40px;
     float: left;
     color: white;
     display: none;
 }
-.buyText2{
+
+.buyText2 {
     width: 100px;
     height: 40px;
-    margin-left: 2% ;
-    margin-top:2%;
+    margin-left: 2%;
+    margin-top: 2%;
     line-height: 40px;
     float: left;
     color: white;
