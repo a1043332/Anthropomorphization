@@ -115,21 +115,26 @@ function say6() {
     }
 }
 
-
-
 function nextStep1() {
     var answerArea = document.querySelector('.answerArea');
     var mainText = document.querySelector('.textArea');
     answerArea.innerHTML = '<button class="btn btn-success btnNext" onclick="nextStep2()">下一步</button>'
-    mainText.innerHTML = ' <div class="topTitle">三種購物方式的範例</div><div class="examplePic"><img src="pictures/example1.png" class="exampleImg" alt=""></div><div class="examplePic"><img src="pictures/example2.png" class="exampleImg" alt=""></div><div class="examplePic"><img src="pictures/example3.png" class="exampleImg" alt=""></div><div class="clear"></div>';
+    mainText.innerHTML = '<div class="textTitle">任務說明</div><div class="textFooter2">你的任務是分別評估你到商城時，<br>對於由小艾助理，AI助理，及商城商品這三種商品介紹的方式，<br>分別有甚麼感受。<br>你的答案沒有對或錯，<br>請根據實際的感受來回答問題。謝謝!<br></div>';
 }
+
 function nextStep2() {
     var answerArea = document.querySelector('.answerArea');
     var mainText = document.querySelector('.textArea');
     answerArea.innerHTML = '<button class="btn btn-success btnNext" onclick="nextStep3()">下一步</button>'
-    mainText.innerHTML = '<div class="topTitle">實驗流程</div><div class="stepDescription"><ul class="list-group"><li class="list-group-item">1.注視銀幕的中間十字標記，專心參與實驗 </li><li class="list-group-item">2.介紹購物助理</li><li class="list-group-item">3.購物助理介紹推薦的產品</li><li class="list-group-item">4.針對購物助理回答相關的問題</li><li class="list-group-item">5.購物助理介紹產品及價格</li><li class="list-group-item">6.評估並回答你的購買意願 </li><li class="list-group-item">7.重複步驟1~6，直到完成實驗</li><li class="list-group-item"> ★接著下面就開始實驗</li></ul></div>';
+    mainText.innerHTML = ' <div class="topTitle">三種購物方式的範例</div><div class="examplePic"><img src="pictures/example1.png" class="exampleImg" alt=""></div><div class="examplePic"><img src="pictures/example2.png" class="exampleImg" alt=""></div><div class="examplePic"><img src="pictures/example3.png" class="exampleImg" alt=""></div><div class="clear"></div>';
 }
 function nextStep3() {
+    var answerArea = document.querySelector('.answerArea');
+    var mainText = document.querySelector('.textArea');
+    answerArea.innerHTML = '<button class="btn btn-success btnNext" onclick="nextStep4()">下一步</button>'
+    mainText.innerHTML = '<div class="topTitle">實驗流程</div><div class="stepDescription"><ul class="list-group"><li class="list-group-item">1.注視銀幕的中間十字標記，專心參與實驗 </li><li class="list-group-item">2.介紹購物助理</li><li class="list-group-item">3.購物助理介紹推薦的產品</li><li class="list-group-item">4.針對購物助理回答相關的問題</li><li class="list-group-item">5.購物助理介紹產品及價格</li><li class="list-group-item">6.評估並回答你的購買意願 </li><li class="list-group-item">7.重複步驟1~6，直到完成實驗</li><li class="list-group-item"> ★接著下面就開始實驗</li></ul></div>';
+}
+function nextStep4() {
     window.location.href = "recommendTest.html"
 }
 function backToHome() {
