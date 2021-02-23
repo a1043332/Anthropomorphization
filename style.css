@@ -295,3 +295,16 @@ body {
     color: white;
     display: none;
 }
+
+.checkBox{
+    float: left;
+    height: 80px;
+    margin-top: 85px;
+    margin-left: 125px;
+}
+
+.interactive{
+    padding-top: 180px;
+   font-size: 20px;
+   color: white;
+}

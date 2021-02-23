@@ -156,7 +156,7 @@
         questionsNum=recommendList.length;
         $(".buyText1").show(); $(".buyText2").show(); $(".btn1").show(); $(".btn2").show(); $(".btn3").show(); $(".btn4").show(); $(".btn5").show(); $(".btn6").show();
         var mainPicture = document.querySelector('.pictureArea');
-        mainPicture.innerHTML = '<div>根據剛剛和小艾的互動，您覺得小愛有多像真人？</div>';
+        mainPicture.innerHTML = '<div class="interactive">根據剛剛和小艾的互動，您覺得小愛有多像真人？</div>';
     }
 
 
@@ -247,21 +247,7 @@
         }
     }
 
-    var getUrlParameter = function getUrlParameter(sParam) {
-        var sPageURL = window.location.search.substring(1),
-            sURLVariables = sPageURL.split('&'),
-            sParameterName,
-            i;
 
-        for (i = 0; i < sURLVariables.length; i++) {
-            sParameterName = sURLVariables[i].split('=');
-
-            if (sParameterName[0] === sParam) {
-                return typeof sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
-            }
-        }
-        return false;
-    };
 
 
 
