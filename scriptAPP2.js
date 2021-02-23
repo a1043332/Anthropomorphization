@@ -1,6 +1,7 @@
 function sendSheet2() {
     $.ajax({
         url: "https://script.google.com/a/macros/mail.nuk.edu.tw/s/AKfycbzUEuJwnf8Yi8FCg-FCjeL_-KcvbAtINgB_uRDNQkM3-smZ7qoFYMbl5Q/exec",
+       
         data: {
             "a": "rrr",
             "b": "localStorage.getItem('shinAns6')",
