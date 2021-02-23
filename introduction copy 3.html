@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-MJ9DFS4');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+    <title>Anthropomorphization Test Part2</title>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MJ9DFS4" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="container">
+        <div class="questionArea">
+            <!-- <div class="pictureArea"> -->
+            <!-- <img src="pictures/main5.png" class="mainPicture" alt=""> -->
+            <!-- <button class="btn btn-btn btn-primary btnStart" onclick="start()" id='btnStart'>開始填答</button> -->
+            <!-- <div class="thankYou">謝謝您的幫忙~</div> -->
+
+            <!-- </div> -->
+            <div class="textArea">
+                <div class="textTitle">輸入有興趣的產品，我們會運用人工智慧進行分析</div>
+                <div>
+                    <form action="">
+                        <textarea name="" id="myBought" cols="90" rows="10"></textarea>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="answerArea">
+            <!-- <button class="btn btn-success btnYes" name="btnYes" onclick="sayYes()">Yes</button>
+            <button class="btn btn-danger btnNo" name="btnYes" onclick="sayNo()">No</button> -->
+            <button class="btn btn-success btnNext" onclick="nextStep123()" >下一步</button>
+        </div>
+    </div>
+</body>
+
+<script>
+    var c = 0, limit = 3;
+    function doCheck(obj) {
+        obj.checked ? c++ : c--;
+        if (c > limit) {
+            obj.checked = false;
+            c--;
+        }
+        if (c == 3) {
+            $('.btnNext').attr('disabled', false);
+        }
+        else {
+            $('.btnNext').attr('disabled', true);
+        }
+    }
+    function nextStep123() {
+        var answerArea = document.querySelector('.answerArea');
+        var mainText = document.querySelector('.textArea');
+
+        var myBought = $('#myBought').val();
+        
+
+        console.log(myBought)
+
+        answerArea.innerHTML = '<button class="btn btn-success btnNext" onclick="nextStep2()">下一步</button>'
+        mainText.innerHTML = '<div class="textTitle">任務說明</div><div class="textFooter2">你的任務是分別評估你到商城時，<br>對於由小艾助理，AI助理，及商城商品這三種商品介紹的方式，<br>分別有甚麼感受。<br>你的答案沒有對或錯，<br>請根據實際的感受來回答問題。謝謝!<br></div>';
+    }
+</script>
+
+</html>

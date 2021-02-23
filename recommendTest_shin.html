@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-MJ9DFS4');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+    <script src="scriptAPP.js"></script>
+    <title>Anthropomorphization Test Part2</title>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MJ9DFS4" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="container">
+        <div class="questionArea">
+            <div class="textTitle" style="border-radius: 10px;">以下是我們的熱銷商品</div>
+            <div class="pictureArea"></div>
+            <!-- <div class="pictureArea">
+               
+                <img src="pictures/main1.png" class="mainPicture" alt=""> 
+             
+            </div> -->
+        </div>
+        <div class="answerArea">
+            <!-- <button class="btn btn-success btnYes" name="btnYes" onclick="sayYes()">Yes</button>
+            <button class="btn btn-danger btnNo" name="btnYes" onclick="sayNo()">No</button> -->
+            <div class="buyText1">非常不想購買</div>
+            <button class="btn btn-primary btn1" onclick="say3_1()">1</button>
+            <button class="btn btn-primary btn2" onclick="say3_2()">2</button>
+            <button class="btn btn-primary btn3" onclick="say3_3()">3</button>
+            <button class="btn btn-primary btn4" onclick="say3_4()">4</button>
+            <button class="btn btn-primary btn5" onclick="say3_5()">5</button>
+            <button class="btn btn-primary btn6" onclick="say3_6()">6</button>
+            <div class="buyText2">非常想要購買</div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</body>
+
+<script>
+      var questionsNum = 3;
+    var picturesList = getRandomList(questionsNum);
+    var questionsCount = 0;
+    var yesCount = 0, noCount = 0;
+    var btn1Count = 0, btn2Count = 0, btn3Count = 0, btn4Count = 0, btn5Count = 0, btn6Count = 0;
+    window.onload = function () {
+        start3();
+    };
+
+    function start3() {
+        questionsCount++;
+        $(".buyText1").show(); $(".buyText2").show(); $(".btn1").show(); $(".btn2").show(); $(".btn3").show(); $(".btn4").show(); $(".btn5").show(); $(".btn6").show();
+        var mainPicture = document.querySelector('.pictureArea');
+        mainPicture.innerHTML = '<img src="pictures/main' + picturesList[questionsCount - 1] + '.png" class="mainPicture" alt=""> ';
+    }
+  
+
+
+
+    function say3_1() {
+        btn1Count++;
+        questionsCount++;
+        var mainPicture = document.querySelector('.pictureArea');
+        if (questionsCount <= questionsNum) {
+            mainPicture.innerHTML = '<img src="pictures/main' + picturesList[questionsCount - 1] + '.png" class="mainPicture" alt=""> ';
+        }
+        else {
+            window.location.href = "introduction_ai.html"
+        }
+    }
+    function say3_2() {
+        btn2Count++;
+        questionsCount++;
+        var mainPicture = document.querySelector('.pictureArea');
+        if (questionsCount <= questionsNum) {
+            mainPicture.innerHTML = '<img src="pictures/main' + picturesList[questionsCount - 1] + '.png" class="mainPicture" alt=""> ';
+        }
+        else {
+            window.location.href = "introduction_ai.html"
+        }
+    }
+    function say3_3() {
+        btn3Count++;
+        questionsCount++;
+        var mainPicture = document.querySelector('.pictureArea');
+        if (questionsCount <= questionsNum) {
+            mainPicture.innerHTML = '<img src="pictures/main' + picturesList[questionsCount - 1] + '.png" class="mainPicture" alt=""> ';
+        }
+        else {
+            window.location.href = "introduction_ai.html"
+        }
+    }
+    function say3_4() {
+        btn4Count++;
+        questionsCount++;
+        var mainPicture = document.querySelector('.pictureArea');
+        if (questionsCount <= questionsNum) {
+            mainPicture.innerHTML = '<img src="pictures/main' + picturesList[questionsCount - 1] + '.png" class="mainPicture" alt=""> ';
+        }
+        else {
+            window.location.href = "introduction_ai.html"
+        }
+    }
+    function say3_5() {
+        btn5Count++;
+        questionsCount++;
+        var mainPicture = document.querySelector('.pictureArea');
+        if (questionsCount <= questionsNum) {
+            mainPicture.innerHTML = '<img src="pictures/main' + picturesList[questionsCount - 1] + '.png" class="mainPicture" alt=""> ';
+        }
+        else {
+            window.location.href = "introduction_ai.html"
+        }
+    }
+    function say3_6() {
+        btn6Count++;
+        questionsCount++;
+        var mainPicture = document.querySelector('.pictureArea');
+        if (questionsCount <= questionsNum) {
+            mainPicture.innerHTML = '<img src="pictures/main' + picturesList[questionsCount - 1] + '.png" class="mainPicture" alt=""> ';
+        }
+        else {
+            window.location.href = "introduction_ai.html"
+        }
+    }
+
+
+
+ 
+</script>
+
+</html>

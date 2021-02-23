@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-MJ9DFS4');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+    <title>Anthropomorphization Test Part2</title>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MJ9DFS4" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="container">
+        <div class="questionArea">
+            <!-- <div class="pictureArea"> -->
+            <!-- <img src="pictures/main5.png" class="mainPicture" alt=""> -->
+            <!-- <button class="btn btn-btn btn-primary btnStart" onclick="start()" id='btnStart'>開始填答</button> -->
+            <!-- <div class="thankYou">謝謝您的幫忙~</div> -->
+
+            <!-- </div> -->
+            <div class="textArea">
+                <div class="textTitle">欣欣購物是個電子商務的平台，上面有三個不同的購物方式，
+                </div>
+                <div class="recommendClass recommendClass_main">
+                    <div class="recommendImg">
+                        <img src="pictures/i.png" class="recommenderPic" alt="">
+                    </div>
+                    <div class="recommendText">
+                        我是購物專家小艾
+                        有十年的購物經驗，我會根據你的狀況推薦適合的商品給你，請幫我在下一頁選擇喜歡的商品種類，以便我幫您找出您喜愛的商品。
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="recommendClass">
+                    <!--  -->
+                </div>
+                <div class="recommendClass" style="border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;">
+                    <!--  -->
+                </div>
+                <!-- <div class="textFooter">
+                    你的任務是分別評估你到商城時，對於由小艾助理，AI助理，及商城商品這三種商品介紹的方式，分別有甚麼感受。
+你的答案沒有對或錯，請根據實際的感受來回答問題。謝謝!
+                </div> -->
+            </div>
+        </div>
+        <div class="answerArea">
+            <!-- <button class="btn btn-success btnYes" name="btnYes" onclick="sayYes()">Yes</button>
+            <button class="btn btn-danger btnNo" name="btnYes" onclick="sayNo()">No</button> -->
+            <button class="btn btn-success btnNext" onclick="nextStep1_1()">下一步</button>
+        </div>
+    </div>
+</body>
+
+<script>
+    var c = 0, limit = 3;
+    function doCheck(obj) {
+        obj.checked ? c++ : c--;
+        if (c > limit) {
+            obj.checked = false;
+            c--;
+        }
+        if (c == 3) {
+            $('.btnNext').attr('disabled', false);
+        }
+        else {
+            $('.btnNext').attr('disabled', true);
+        }
+    }
+
+    function nextStep1_1() {
+        var answerArea = document.querySelector('.answerArea');
+        var textTitle = document.querySelector('.textTitle');
+        var recommendClass_main = document.querySelector('.recommendClass_main');
+        answerArea.innerHTML = '<button class="btn btn-success btnNext" onclick="nextStep1_2()" disabled>下一步</button>'
+        textTitle.innerHTML = '選出三項喜歡的產品'
+        recommendClass_main.innerHTML = '<div><form action=""><div><input class="form-check-input" type="checkbox" name="hobby1" id="sport" onclick="doCheck(this)" /><label class="form-check-label" for="sport">運動戶外</label></div><div><input class="form-check-input" type="checkbox" name="hobby2" id="live" onclick="doCheck(this)" /><label class="form-check-label" for="live">生活用品</label></div><div><input class="form-check-input" type="checkbox" name="hobby3" id="food" onclick="doCheck(this)" /><label class="form-check-label" for="food">食品</label></div><div><input class="form-check-input" type="checkbox" name="hobby4" id="home"onclick="doCheck(this)" /><label class="form-check-label" for="home">家電</label></div><div><input class="form-check-input" type="checkbox" name="hobby5" id="computer"onclick="doCheck(this)" /><label class="form-check-label" for="computer">電腦周邊</label></div><div><input class="form-check-input" type="checkbox" name="hobby6" id="accessory"onclick="doCheck(this)" /><label class="form-check-label" for="accessory">裝飾配件</label></div></form></div>';
+    }
+
+    function nextStep1_2(){
+        window.location.href = "recommendTest_i.html"
+    }
+
+
+
+
+</script>
+
+</html>
