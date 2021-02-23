@@ -23,7 +23,8 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="main.js"></script>
-    
+    <script src="scriptAPP.js"></script>
+
     <title>Anthropomorphization Test Part2</title>
 </head>
 
@@ -57,13 +58,31 @@
             </div>
         </div>
         <div class="answerArea">
-            <button class="btn btn-success btnNext" onclick="nextStep2_1()">下一步</button>
+            <div class="btnReg"></div>
+            <button class="btn btn-success btnNext" onclick="nextStep2_1()" disabled>下一步</button>
         </div>
     </div>
 </body>
 
 <script>
-     var sport = false;
+    sendSheet1()
+    var leftSeconds = 3;
+    var intervalid;
+    $(function () {
+        $(".btnNext").attr("disabled", true);//開始讓他不可按
+        intervalid = setInterval("CountDown()", 1000);
+    });
+
+    function CountDown() {
+        if (leftSeconds == 0) {
+            $(".btnNext").attr("disabled", false);
+            clearInterval(intervalid);
+            return;
+        }
+        leftSeconds--;
+         $(".btnReg").val("請仔細閱讀"+leftSeconds+"秒");
+    }
+    var sport = false;
     var life = false;
     var food = false;
     var home = false;
@@ -91,15 +110,16 @@
     }
 
     function nextStep2_1() {
+
         var answerArea = document.querySelector('.answerArea');
         var textTitle = document.querySelector('.textTitle');
         var recommendClass_main = document.querySelector('.recommendClass_main');
-        answerArea.innerHTML = '<button class="btn btn-success btnNext" onclick="nextStep2_2()" >下一步</button>'
+        answerArea.innerHTML = '<button class="btn btn-success btnNext" onclick="nextStep2_2()" disabled>下一步</button>'
         textTitle.innerHTML = '輸入有興趣的產品，我們會運用人工智慧進行分析'
         recommendClass_main.innerHTML = '<div class="form-check"form action=""><div class="checkBox"><input class="form-check-input" type="checkbox" name="hobby1" id="sport" onclick="doCheck(this)" /><label class="form-check-label" for="sport">運動戶外</label></div><div  class="checkBox"><input class="form-check-input" type="checkbox" name="hobby2" id="life" onclick="doCheck(this)" /><label class="form-check-label" for="life">生活用品</label></div><div class="checkBox"><input class="form-check-input" type="checkbox" name="hobby3" id="food" onclick="doCheck(this)" /><label class="form-check-label" for="food">食品</label></div><div class="clear"></div><div class="checkBox"><input class="form-check-input" type="checkbox" name="hobby6" id="accessory"onclick="doCheck(this)" /><label class="form-check-label" for="accessory">裝飾配件</label></div><div class="checkBox"><input class="form-check-input" type="checkbox" name="hobby5" id="computer"onclick="doCheck(this)" /><label class="form-check-label" for="computer">電腦周邊</label></div><div class="checkBox"><input class="form-check-input" type="checkbox" name="hobby4" id="home"onclick="doCheck(this)" /><label class="form-check-label" for="home">家電</label></div><div class="clear"></div></form></div>';
     }
 
-    function nextStep2_2(){
+    function nextStep2_2() {
         var getParameter = 'sport=' + sport + '&life=' + life + '&food=' + food + '&home=' + home + '&computer=' + computer + '&accessory=' + accessory;
         window.location.href = 'recommendTest_ai.html?' + getParameter;
     }

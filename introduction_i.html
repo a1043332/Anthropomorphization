@@ -23,6 +23,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="main.js"></script>
+    <script src="scriptAPP.js"></script>
     <title>Anthropomorphization Test Part2</title>
 </head>
 
@@ -67,12 +68,36 @@
         <div class="answerArea">
             <!-- <button class="btn btn-success btnYes" name="btnYes" onclick="sayYes()">Yes</button>
             <button class="btn btn-danger btnNo" name="btnYes" onclick="sayNo()">No</button> -->
-            <button class="btn btn-success btnNext" onclick="nextStep1_1()">下一步</button>
+            <button class="btn btn-success btnNext" onclick="nextStep1_1()" disabled>下一步</button>
         </div>
     </div>
 </body>
 
 <script>
+
+var leftSeconds=3;
+var intervalid;
+$(function(){
+$(".btnNext").attr("disabled",true);//開始讓他不可按
+intervalid=setInterval("CountDown()",1000);
+});
+
+function CountDown(){
+if(leftSeconds==0){
+$(".btnNext").attr("disabled",false);
+clearInterval(intervalid);
+return;
+}
+leftSeconds--;
+// $("#btnReg").val("請仔細閱讀"+leftSeconds+"秒");
+}
+
+
+
+
+
+
+
     var sport = false;
     var life = false;
     var food = false;
