@@ -34,7 +34,7 @@
     <!-- End Google Tag Manager (noscript) -->
     <div class="container">
         <div class="questionArea">
-            <div class="textTitle" style="border-radius: 10px;"> 以下是我推薦給您的商品</div>
+            <div class="textTitle" style="border-radius: 10px;">您覺得小艾像真人嗎？</div>
             <div class="pictureArea"></div>
             <!-- <div class="pictureArea">
                
@@ -45,21 +45,30 @@
         <div class="answerArea">
             <!-- <button class="btn btn-success btnYes" name="btnYes" onclick="sayYes()">Yes</button>
             <button class="btn btn-danger btnNo" name="btnYes" onclick="sayNo()">No</button> -->
-            <div class="buyText1">非常不想購買</div>
+            <div class="buyText1">非常不像</div>
             <button class="btn btn-primary btn1" onclick="say1_1()">1</button>
             <button class="btn btn-primary btn2" onclick="say1_2()">2</button>
             <button class="btn btn-primary btn3" onclick="say1_3()">3</button>
             <button class="btn btn-primary btn4" onclick="say1_4()">4</button>
             <button class="btn btn-primary btn5" onclick="say1_5()">5</button>
             <button class="btn btn-primary btn6" onclick="say1_6()">6</button>
-            <div class="buyText2">非常想要購買</div>
+            <div class="buyText2">非常像</div>
             <div class="clear"></div>
         </div>
     </div>
 </body>
 
 <script>
-      var questionsNum = 3;
+    var recommendList = []
+    var sport = false;
+    var life = false;
+    var food = false;
+    var home = false;
+    var computer = false;
+    var accessory = false;
+
+
+    var questionsNum ;
     var picturesList = getRandomList(questionsNum);
     var questionsCount = 0;
     var yesCount = 0, noCount = 0;
@@ -69,21 +78,99 @@
     };
 
     function start1() {
-        questionsCount++;
+        var falseRecommendList = []
+        var falseRecommendListMax = []
+        sport = getUrlParameter('sport');
+        life = getUrlParameter('life');
+        food = getUrlParameter('food');
+        home = getUrlParameter('home');
+        computer = getUrlParameter('computer');
+        accessory = getUrlParameter('accessory');
+
+        if (sport=='true') {
+            recommendList.push('sport/sport' + (getRandom(maxSport)+1));
+        }
+        else {
+            falseRecommendList.push('sport')
+            falseRecommendListMax.push(maxSport);
+        }
+
+        if (life=='true') {
+            recommendList.push('life/life' + (getRandom(maxLife)+1));
+        }
+        else {
+            falseRecommendList.push('life')
+            falseRecommendListMax.push(maxLife);
+        }
+
+        if (food=='true') {
+            recommendList.push('food/food' + (getRandom(maxFood)+1));
+        }
+        else {
+            falseRecommendList.push('food')
+            falseRecommendListMax.push(maxFood);
+        }
+
+        if (home=='true') {
+            recommendList.push('home/home' + (getRandom(maxHome)+1));
+        }
+        else {
+            falseRecommendList.push('home')
+            falseRecommendListMax.push(maxHome);
+        }
+
+        if (computer=='true') {
+            recommendList.push('computer/computer' + (getRandom(maxComputer)+1));
+        }
+        else {
+            falseRecommendList.push('computer')
+            falseRecommendListMax.push(maxComputer);
+        }
+
+        if (accessory=='true') {
+            recommendList.push('accessory/accessory' + (getRandom(maxAccessory)+1));
+        }
+        else {
+            falseRecommendList.push('accessory')
+            falseRecommendListMax.push(maxAccessory);
+        }
+
+        var i=0
+        while(i<3){
+            var nowPushNum = getRandom(falseRecommendList.length);
+            var pushString = falseRecommendList[nowPushNum]+'/'+falseRecommendList[nowPushNum]+(getRandom(falseRecommendListMax[nowPushNum])+1);
+            var checkRepeat = 0;
+            for(var j =0 ;j<recommendList.length;j++){
+                if(recommendList[j] == pushString){
+                    checkRepeat = 1;
+                }
+            }
+
+            if(checkRepeat != 1 ){
+                recommendList.push(pushString);
+                i++;
+            }
+            
+
+        }
+        questionsNum=recommendList.length;
         $(".buyText1").show(); $(".buyText2").show(); $(".btn1").show(); $(".btn2").show(); $(".btn3").show(); $(".btn4").show(); $(".btn5").show(); $(".btn6").show();
         var mainPicture = document.querySelector('.pictureArea');
-        mainPicture.innerHTML = '<img src="pictures/main' + picturesList[questionsCount - 1] + '.png" class="mainPicture" alt=""> ';
+        mainPicture.innerHTML = '<div>根據剛剛和小艾的互動，您覺得小愛有多像真人？</div>';
     }
-  
+
 
 
 
     function say1_1() {
         btn1Count++;
         questionsCount++;
+        document.querySelector('.textTitle').innerHTML = '我依據您的喜好，推薦給您以下商品';
+        document.querySelector('.buyText1').innerHTML = '非常不想購買';
+        document.querySelector('.buyText2').innerHTML = '非常想購買';
         var mainPicture = document.querySelector('.pictureArea');
         if (questionsCount <= questionsNum) {
-            mainPicture.innerHTML = '<img src="pictures/main' + picturesList[questionsCount - 1] + '.png" class="mainPicture" alt=""> ';
+            mainPicture.innerHTML = '<img src="pictures/' + recommendList[questionsCount - 1] + '.png" class="mainPicture" alt=""> ';
         }
         else {
             window.location.href = "introduction_ai.html"
@@ -92,9 +179,12 @@
     function say1_2() {
         btn2Count++;
         questionsCount++;
+        document.querySelector('.textTitle').innerHTML = '我依據您的喜好，推薦給您以下商品';
+        document.querySelector('.buyText1').innerHTML = '非常不想購買';
+        document.querySelector('.buyText2').innerHTML = '非常想購買';
         var mainPicture = document.querySelector('.pictureArea');
         if (questionsCount <= questionsNum) {
-            mainPicture.innerHTML = '<img src="pictures/main' + picturesList[questionsCount - 1] + '.png" class="mainPicture" alt=""> ';
+            mainPicture.innerHTML = '<img src="pictures/' + recommendList[questionsCount - 1] + '.png" class="mainPicture" alt=""> ';
         }
         else {
             window.location.href = "introduction_ai.html"
@@ -103,9 +193,12 @@
     function say1_3() {
         btn3Count++;
         questionsCount++;
+        document.querySelector('.textTitle').innerHTML = '我依據您的喜好，推薦給您以下商品';
+        document.querySelector('.buyText1').innerHTML = '非常不想購買';
+        document.querySelector('.buyText2').innerHTML = '非常想購買';
         var mainPicture = document.querySelector('.pictureArea');
         if (questionsCount <= questionsNum) {
-            mainPicture.innerHTML = '<img src="pictures/main' + picturesList[questionsCount - 1] + '.png" class="mainPicture" alt=""> ';
+            mainPicture.innerHTML = '<img src="pictures/' + recommendList[questionsCount - 1] + '.png" class="mainPicture" alt=""> ';
         }
         else {
             window.location.href = "introduction_ai.html"
@@ -114,9 +207,12 @@
     function say1_4() {
         btn4Count++;
         questionsCount++;
+        document.querySelector('.textTitle').innerHTML = '我依據您的喜好，推薦給您以下商品';
+        document.querySelector('.buyText1').innerHTML = '非常不想購買';
+        document.querySelector('.buyText2').innerHTML = '非常想購買';
         var mainPicture = document.querySelector('.pictureArea');
         if (questionsCount <= questionsNum) {
-            mainPicture.innerHTML = '<img src="pictures/main' + picturesList[questionsCount - 1] + '.png" class="mainPicture" alt=""> ';
+            mainPicture.innerHTML = '<img src="pictures/' + recommendList[questionsCount - 1] + '.png" class="mainPicture" alt=""> ';
         }
         else {
             window.location.href = "introduction_ai.html"
@@ -125,9 +221,12 @@
     function say1_5() {
         btn5Count++;
         questionsCount++;
+        document.querySelector('.textTitle').innerHTML = '我依據您的喜好，推薦給您以下商品';
+        document.querySelector('.buyText1').innerHTML = '非常不想購買';
+        document.querySelector('.buyText2').innerHTML = '非常想購買';
         var mainPicture = document.querySelector('.pictureArea');
         if (questionsCount <= questionsNum) {
-            mainPicture.innerHTML = '<img src="pictures/main' + picturesList[questionsCount - 1] + '.png" class="mainPicture" alt=""> ';
+            mainPicture.innerHTML = '<img src="pictures/' + recommendList[questionsCount - 1] + '.png" class="mainPicture" alt=""> ';
         }
         else {
             window.location.href = "introduction_ai.html"
@@ -136,18 +235,36 @@
     function say1_6() {
         btn6Count++;
         questionsCount++;
+        document.querySelector('.textTitle').innerHTML = '我依據您的喜好，推薦給您以下商品：';
+        document.querySelector('.buyText1').innerHTML = '非常不想購買';
+        document.querySelector('.buyText2').innerHTML = '非常想購買';
         var mainPicture = document.querySelector('.pictureArea');
         if (questionsCount <= questionsNum) {
-            mainPicture.innerHTML = '<img src="pictures/main' + picturesList[questionsCount - 1] + '.png" class="mainPicture" alt=""> ';
+            mainPicture.innerHTML = '<img src="pictures/' + recommendList[questionsCount - 1] + '.png" class="mainPicture" alt=""> ';
         }
         else {
             window.location.href = "introduction_ai.html"
         }
     }
 
+    var getUrlParameter = function getUrlParameter(sParam) {
+        var sPageURL = window.location.search.substring(1),
+            sURLVariables = sPageURL.split('&'),
+            sParameterName,
+            i;
+
+        for (i = 0; i < sURLVariables.length; i++) {
+            sParameterName = sURLVariables[i].split('=');
+
+            if (sParameterName[0] === sParam) {
+                return typeof sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+            }
+        }
+        return false;
+    };
 
 
- 
+
 </script>
 
 </html>

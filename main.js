@@ -1,3 +1,14 @@
+//    2/23之後的
+
+var maxFood = 7;
+var maxLife = 26;
+var maxHome = 5;
+var maxComputer = 16;
+var maxSport = 15;
+var maxAccessory = 9;
+
+
+
 var questionsNum = 5;
 var picturesList = getRandomList(questionsNum);
 var questionsCount = 0;
@@ -162,4 +173,20 @@ function getRandomList(x) {
 }
 function getRandom(x) {
     return Math.floor(Math.random() * x);
+};
+
+var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = window.location.search.substring(1),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return typeof sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+        }
+    }
+    return false;
 };
