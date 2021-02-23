@@ -165,6 +165,12 @@
     function say1_1() {
         btn1Count++;
         questionsCount++;
+        var ask = '非推薦題'
+        if((questionsCount - 2) >= 0){
+            ask = recommendList[questionsCount - 2]+'.png'
+        }
+        localStorage.setItem('iPng'+String(questionsCount), ask);
+        localStorage.setItem('iAns'+String(questionsCount), '1');
         document.querySelector('.textTitle').innerHTML = '我依據您的喜好，推薦給您以下商品';
         document.querySelector('.buyText1').innerHTML = '非常不想購買';
         document.querySelector('.buyText2').innerHTML = '非常想購買';
@@ -179,6 +185,12 @@
     function say1_2() {
         btn2Count++;
         questionsCount++;
+        var ask = '非推薦題'
+        if((questionsCount - 2) >= 0){
+            ask = recommendList[questionsCount - 2]+'.png'
+        }
+        localStorage.setItem('iPng'+String(questionsCount), ask);
+        localStorage.setItem('iAns'+String(questionsCount), '2');
         document.querySelector('.textTitle').innerHTML = '我依據您的喜好，推薦給您以下商品';
         document.querySelector('.buyText1').innerHTML = '非常不想購買';
         document.querySelector('.buyText2').innerHTML = '非常想購買';
@@ -193,6 +205,12 @@
     function say1_3() {
         btn3Count++;
         questionsCount++;
+        var ask = '非推薦題'
+        if((questionsCount - 2) >= 0){
+            ask = recommendList[questionsCount - 2]+'.png'
+        }
+        localStorage.setItem('iPng'+String(questionsCount), ask);
+        localStorage.setItem('iAns'+String(questionsCount), '3');
         document.querySelector('.textTitle').innerHTML = '我依據您的喜好，推薦給您以下商品';
         document.querySelector('.buyText1').innerHTML = '非常不想購買';
         document.querySelector('.buyText2').innerHTML = '非常想購買';
@@ -207,6 +225,12 @@
     function say1_4() {
         btn4Count++;
         questionsCount++;
+        var ask = '非推薦題'
+        if((questionsCount - 2) >= 0){
+            ask = recommendList[questionsCount - 2]+'.png'
+        }
+        localStorage.setItem('iPng'+String(questionsCount), ask);
+        localStorage.setItem('iAns'+String(questionsCount), '4');
         document.querySelector('.textTitle').innerHTML = '我依據您的喜好，推薦給您以下商品';
         document.querySelector('.buyText1').innerHTML = '非常不想購買';
         document.querySelector('.buyText2').innerHTML = '非常想購買';
@@ -221,6 +245,12 @@
     function say1_5() {
         btn5Count++;
         questionsCount++;
+        var ask = '非推薦題'
+        if((questionsCount - 2) >= 0){
+            ask = recommendList[questionsCount - 2]+'.png'
+        }
+        localStorage.setItem('iPng'+String(questionsCount), ask);
+        localStorage.setItem('iAns'+String(questionsCount), '5');
         document.querySelector('.textTitle').innerHTML = '我依據您的喜好，推薦給您以下商品';
         document.querySelector('.buyText1').innerHTML = '非常不想購買';
         document.querySelector('.buyText2').innerHTML = '非常想購買';
@@ -235,6 +265,12 @@
     function say1_6() {
         btn6Count++;
         questionsCount++;
+        var ask = '非推薦題'
+        if((questionsCount - 2) >= 0){
+            ask = recommendList[questionsCount - 2]+'.png'
+        }
+        localStorage.setItem('iPng'+String(questionsCount), ask);
+        localStorage.setItem('iAns'+String(questionsCount), '6');
         document.querySelector('.textTitle').innerHTML = '我依據您的喜好，推薦給您以下商品：';
         document.querySelector('.buyText1').innerHTML = '非常不想購買';
         document.querySelector('.buyText2').innerHTML = '非常想購買';

@@ -166,6 +166,12 @@
     function say2_1() {
         btn1Count++;
         questionsCount++;
+        var ask = '非推薦題'
+        if((questionsCount - 2) >= 0){
+            ask = recommendList[questionsCount - 2]+'.png'
+        }
+        localStorage.setItem('aiPng'+String(questionsCount), ask);
+        localStorage.setItem('aiAns'+String(questionsCount), '1');
         document.querySelector('.textTitle').innerHTML = '在您有興趣的產品中，其他人都買了';
         document.querySelector('.buyText1').innerHTML = '非常不想購買';
         document.querySelector('.buyText2').innerHTML = '非常想購買';
@@ -180,6 +186,12 @@
     function say2_2() {
         btn2Count++;
         questionsCount++;
+        var ask = '非推薦題'
+        if((questionsCount - 2) >= 0){
+            ask = recommendList[questionsCount - 2]+'.png'
+        }
+        localStorage.setItem('aiPng'+String(questionsCount), ask);
+        localStorage.setItem('aiAns'+String(questionsCount), '2');
         document.querySelector('.textTitle').innerHTML = '在您有興趣的產品中，其他人都買了';
         document.querySelector('.buyText1').innerHTML = '非常不想購買';
         document.querySelector('.buyText2').innerHTML = '非常想購買';
@@ -188,12 +200,19 @@
             mainPicture.innerHTML = '<img src="pictures/' + recommendList[questionsCount - 1] + '.png" class="mainPicture" alt=""> ';
         }
         else {
+
             window.location.href = "introduction_shin.html"
         }
     }
     function say2_3() {
         btn3Count++;
         questionsCount++;
+        var ask = '非推薦題'
+        if((questionsCount - 2) >= 0){
+            ask = recommendList[questionsCount - 2]+'.png'
+        }
+        localStorage.setItem('aiPng'+String(questionsCount), ask);
+        localStorage.setItem('aiAns'+String(questionsCount), '3');
         document.querySelector('.textTitle').innerHTML = '在您有興趣的產品中，其他人都買了';
         document.querySelector('.buyText1').innerHTML = '非常不想購買';
         document.querySelector('.buyText2').innerHTML = '非常想購買';
@@ -202,12 +221,19 @@
             mainPicture.innerHTML = '<img src="pictures/' + recommendList[questionsCount - 1] + '.png" class="mainPicture" alt=""> ';
         }
         else {
+    
             window.location.href = "introduction_shin.html"
         }
     }
     function say2_4() {
         btn4Count++;
         questionsCount++;
+        var ask = '非推薦題'
+        if((questionsCount - 2) >= 0){
+            ask = recommendList[questionsCount - 2]+'.png'
+        }
+        localStorage.setItem('aiPng'+String(questionsCount), ask);
+        localStorage.setItem('aiAns'+String(questionsCount), '4');
         document.querySelector('.textTitle').innerHTML = '在您有興趣的產品中，其他人都買了';
         document.querySelector('.buyText1').innerHTML = '非常不想購買';
         document.querySelector('.buyText2').innerHTML = '非常想購買';
@@ -216,12 +242,19 @@
             mainPicture.innerHTML = '<img src="pictures/' + recommendList[questionsCount - 1] + '.png" class="mainPicture" alt=""> ';
         }
         else {
+   
             window.location.href = "introduction_shin.html"
         }
     }
     function say2_5() {
         btn5Count++;
-        questionsCount++;
+        questionsCount++;  
+        var ask = '非推薦題'
+        if((questionsCount - 2) >= 0){
+            ask = recommendList[questionsCount - 2]+'.png'
+        }
+        localStorage.setItem('aiPng'+String(questionsCount), ask);
+        localStorage.setItem('aiAns'+String(questionsCount), '5');
         document.querySelector('.textTitle').innerHTML = '在您有興趣的產品中，其他人都買了';
         document.querySelector('.buyText1').innerHTML = '非常不想購買';
         document.querySelector('.buyText2').innerHTML = '非常想購買';
@@ -230,12 +263,19 @@
             mainPicture.innerHTML = '<img src="pictures/' + recommendList[questionsCount - 1] + '.png" class="mainPicture" alt=""> ';
         }
         else {
+    
             window.location.href = "introduction_shin.html"
         }
     }
     function say2_6() {
         btn6Count++;
         questionsCount++;
+        var ask = '非推薦題'
+        if((questionsCount - 2) >= 0){
+            ask = recommendList[questionsCount - 2]+'.png'
+        }
+        localStorage.setItem('aiPng'+String(questionsCount), ask);
+        localStorage.setItem('aiAns'+String(questionsCount), '6');
         document.querySelector('.textTitle').innerHTML = '在您有興趣的產品中，其他人都買了';
         document.querySelector('.buyText1').innerHTML = '非常不想購買';
         document.querySelector('.buyText2').innerHTML = '非常想購買';
@@ -244,7 +284,9 @@
             mainPicture.innerHTML = '<img src="pictures/' + recommendList[questionsCount - 1] + '.png" class="mainPicture" alt=""> ';
         }
         else {
+
             window.location.href = "introduction_shin.html"
+            
         }
     }
 
