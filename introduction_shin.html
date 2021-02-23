@@ -37,15 +37,16 @@
         <div class="questionArea">
 
             <div class="textArea">
-                <div class="textTitle">欣欣購物是個電子商務的平台，上面有三個不同的購物方式，
+                <div class="textTitle">欣欣購物也有預設的系統推薦服務：
                 </div>
                 <div class="recommendClass recommendClass_main">
+                    <div class="recommendTitle">欣欣購物商城</div>
                     <div class="recommendImg">
                         <img src="pictures/shin.png" class="recommenderPic" alt="">
                     </div>
                     <div class="recommendText">
-                        商城推出的商品
-                        欣欣商城每天會推出當天的特銷商品，給所有顧客購買。
+                        欣欣購物上有大量的商品，<br>
+                        每天會整理出最優惠的商品推薦給顧客。
                     </div>
                     <div class="clear"></div>
                 </div>
@@ -65,25 +66,25 @@
 
 <script>
     sendSheet2()
-var leftSeconds=3;
-var intervalid;
-$(function(){
-$(".btnNext").attr("disabled",true);//開始讓他不可按
-intervalid=setInterval("CountDown()",1000);
-});
+    var leftSeconds = 3;
+    var intervalid;
+    $(function () {
+        $(".btnNext").attr("disabled", true);//開始讓他不可按
+        intervalid = setInterval("CountDown()", 1000);
+    });
 
-function CountDown(){
-if(leftSeconds==0){
-$(".btnNext").attr("disabled",false);
-clearInterval(intervalid);
-return;
-}
-leftSeconds--;
-// $("#btnReg").val("請仔細閱讀"+leftSeconds+"秒");
-}
+    function CountDown() {
+        if (leftSeconds == 0) {
+            $(".btnNext").attr("disabled", false);
+            clearInterval(intervalid);
+            return;
+        }
+        leftSeconds--;
+        // $("#btnReg").val("請仔細閱讀"+leftSeconds+"秒");
+    }
 
 
-   var sport = false;
+    var sport = false;
     var life = false;
     var food = false;
     var home = false;
@@ -109,8 +110,8 @@ leftSeconds--;
         computer = $('#computer').is(":checked");
         accessory = $('#accessory').is(":checked");
     }
-   
-   function nextStep3_1() {
+
+    function nextStep3_1() {
         var answerArea = document.querySelector('.answerArea');
         var textTitle = document.querySelector('.textTitle');
         var recommendClass_main = document.querySelector('.recommendClass_main');
