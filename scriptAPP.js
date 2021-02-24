@@ -1,4 +1,4 @@
-function sendSheet1() {
+function sendSheet1(fn) {
 
     $.ajax({
         url: "https://script.google.com/macros/s/AKfycbwfA3JR9FXgftsdqheKGGXGc1iCnJ7s1UlFDNP7b6n_HJTWL2Bcr8yhQA/exec",
@@ -27,12 +27,13 @@ function sendSheet1() {
             if (response == "success") {
                 btn1Count = 0, btn2Count = 0, btn3Count = 0, btn4Count = 0, btn5Count = 0, btn6Count = 0;
                 console.log('感謝您')
+                fn()
                 //  localStorage.clear();
             }
         },
     });
 }
-function sendSheet2() {
+function sendSheet2(fn) {
 
     $.ajax({
         url: "https://script.google.com/macros/s/AKfycbwfA3JR9FXgftsdqheKGGXGc1iCnJ7s1UlFDNP7b6n_HJTWL2Bcr8yhQA/exec",
@@ -61,12 +62,13 @@ function sendSheet2() {
             if (response == "success") {
                 btn1Count = 0, btn2Count = 0, btn3Count = 0, btn4Count = 0, btn5Count = 0, btn6Count = 0;
                 console.log('感謝您')
+                fn()
                 //  localStorage.clear();
             }
         },
     });
 }
-function sendSheet3() {
+function sendSheet3(fn) {
     $.ajax({
         url: "https://script.google.com/macros/s/AKfycbwfA3JR9FXgftsdqheKGGXGc1iCnJ7s1UlFDNP7b6n_HJTWL2Bcr8yhQA/exec",
         data: {
@@ -92,6 +94,7 @@ function sendSheet3() {
             if (response == "success") {
                 btn1Count = 0, btn2Count = 0, btn3Count = 0, btn4Count = 0, btn5Count = 0, btn6Count = 0;
                 console.log('感謝您')
+                fn()
                 //  localStorage.clear();
             }
         },

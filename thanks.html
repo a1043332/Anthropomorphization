@@ -13,13 +13,15 @@
 </head>
 
 <body>
-    <a href="index.html">首頁</a>
+    <a href="index.html" disabled>首頁</a>
 
     <script>
+        function callbackFn(){
+            $(".btnNext").attr("disabled",false);
+        }
         window.onload = function () {
-            sendSheet1()
-            sendSheet2()
-            sendSheet3()
+            
+            sendSheet3(callbackFn)
         };
     </script>
 </body>

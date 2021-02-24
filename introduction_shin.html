@@ -58,29 +58,33 @@
             </div>
         </div>
         <div class="answerArea">
+            
             <button class="btn btn-success btnNext" onclick="nextStep3_1()" disabled>下一步</button>
         </div>
     </div>
 </body>
 
 <script>
-    sendSheet2()
-var leftSeconds=3;
-var intervalid;
-$(function(){
-$(".btnNext").attr("disabled",true);//開始讓他不可按
-intervalid=setInterval("CountDown()",1000);
-});
+    function callbackFn(){
+        $(".btnNext").attr("disabled",false);
+    }
+    sendSheet2(callbackFn)
+// var leftSeconds=3;
+// var intervalid;
+// $(function(){
+// $(".btnNext").attr("disabled",true);//開始讓他不可按
+// intervalid=setInterval("CountDown()",1000);
+// });
 
-function CountDown(){
-if(leftSeconds==0){
-$(".btnNext").attr("disabled",false);
-clearInterval(intervalid);
-return;
-}
-leftSeconds--;
-// $("#btnReg").val("請仔細閱讀"+leftSeconds+"秒");
-}
+// function CountDown(){
+// if(leftSeconds==0){
+
+// clearInterval(intervalid);
+// return;
+// }
+// leftSeconds--;
+// // $("#btnReg").val("請仔細閱讀"+leftSeconds+"秒");
+// }
 
 
    var sport = false;
