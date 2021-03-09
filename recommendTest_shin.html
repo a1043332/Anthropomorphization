@@ -35,7 +35,7 @@
     <!-- End Google Tag Manager (noscript) -->
     <div class="container">
         <div class="questionArea">
-            <div class="textTitle">您覺得欣欣商城的熱銷推薦系統像真人嗎？</div>
+            <!-- <div class="textTitle">您覺得欣欣商城的熱銷推薦系統像真人嗎？</div> -->
             <div class="pictureArea"></div>
             <!-- <div class="pictureArea">
                
@@ -47,12 +47,12 @@
             <!-- <button class="btn btn-success btnYes" name="btnYes" onclick="sayYes()">Yes</button>
             <button class="btn btn-danger btnNo" name="btnYes" onclick="sayNo()">No</button> -->
             <div class="buyText1">非常不像</div>
-            <button class="btn btn-primary btn1" onclick="say3_1()">1</button>
-            <button class="btn btn-primary btn2" onclick="say3_2()">2</button>
-            <button class="btn btn-primary btn3" onclick="say3_3()">3</button>
-            <button class="btn btn-primary btn4" onclick="say3_4()">4</button>
-            <button class="btn btn-primary btn5" onclick="say3_5()">5</button>
-            <button class="btn btn-primary btn6" onclick="say3_6()">6</button>
+            <button class="btn btn-primary btn1" onclick="say3(1)">1</button>
+            <button class="btn btn-primary btn2" onclick="say3(2)">2</button>
+            <button class="btn btn-primary btn3" onclick="say3(3)">3</button>
+            <button class="btn btn-primary btn4" onclick="say3(4)">4</button>
+            <button class="btn btn-primary btn5" onclick="say3(5)">5</button>
+            <button class="btn btn-primary btn6" onclick="say3(6)">6</button>
             <div class="buyText2">非常像</div>
             <div class="clear"></div>
         </div>
@@ -166,16 +166,54 @@
 
 
 
-    function say3_1() {
-        btn1Count++;
+    function say3(x) {
         questionsCount++;
+
         var ask = '非推薦題'
         if ((questionsCount - 2) >= 0) {
             ask = recommendList[questionsCount - 2] + '.png'
         }
-        localStorage.setItem('shinPng' + String(questionsCount), ask);
-        localStorage.setItem('shinAns' + String(questionsCount), '1');
-        document.querySelector('.textTitle').innerHTML = '以下是我們的精選熱銷商品，推薦給您';
+        
+        switch (x){
+            case 1:
+            btn1Count++;
+            localStorage.setItem('shinPng' + String(questionsCount), ask);
+            localStorage.setItem('shinAns' + String(questionsCount), '1');
+            break;
+
+            case 2:
+            btn2Count++;
+            localStorage.setItem('shinPng' + String(questionsCount), ask);
+            localStorage.setItem('shinAns' + String(questionsCount), '2'); 
+            break;  
+            
+            case 3:
+            btn3Count++;
+            localStorage.setItem('shinPng' + String(questionsCount), ask);
+            localStorage.setItem('shinAns' + String(questionsCount), '3'); 
+            break; 
+
+            case 4:
+            btn4Count++;
+            localStorage.setItem('shinPng' + String(questionsCount), ask);
+            localStorage.setItem('shinAns' + String(questionsCount), '4'); 
+            break; 
+
+            case 5:
+            btn5Count++;
+            localStorage.setItem('shinPng' + String(questionsCount), ask);
+            localStorage.setItem('shinAns' + String(questionsCount), '5'); 
+            break; 
+
+            case 6:
+            btn6Count++; 
+            localStorage.setItem('shinPng' + String(questionsCount), ask);
+            localStorage.setItem('shinAns' + String(questionsCount), '6');
+            break; 
+        }
+
+
+       // document.querySelector('.textTitle').innerHTML = '以下是我們的精選熱銷商品，推薦給您';
         document.querySelector('.buyText1').innerHTML = '非常不想購買';
         document.querySelector('.buyText2').innerHTML = '非常想購買';
         var mainPicture = document.querySelector('.pictureArea');
