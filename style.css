@@ -108,8 +108,9 @@ body {
 }
 
 .textTitle {
-    width: 720px;
+    width: 100%;
     height: 130px;
+    max-width: 720px;
     background: #FED18D;
     border: 1px solid #FED18D;
     margin: 0 auto;
@@ -267,7 +268,8 @@ body {
 }
 
 .btn1 {
-    width: 70px;
+    width: 100%;
+    max-width:70px ;
     height: 40px;
     margin-left: 2%;
     margin-top: 2%;
@@ -276,7 +278,8 @@ body {
 }
 
 .btn2 {
-    width: 70px;
+    width: 100%;
+    max-width:70px ;
     height: 40px;
     margin-left: 2%;
     margin-top: 2%;
@@ -285,7 +288,8 @@ body {
 }
 
 .btn3 {
-    width: 70px;
+    width: 100%;
+    max-width:70px ;
     height: 40px;
     margin-left: 2%;
     margin-top: 2%;
@@ -294,7 +298,8 @@ body {
 }
 
 .btn4 {
-    width: 70px;
+    width: 100%;
+    max-width:70px ;
     height: 40px;
     margin-left: 2%;
     margin-top: 2%;
@@ -303,7 +308,8 @@ body {
 }
 
 .btn5 {
-    width: 70px;
+    width: 100%;
+    max-width:70px ;
     height: 40px;
     margin-left: 2%;
     margin-top: 2%;
@@ -312,12 +318,78 @@ body {
 }
 
 .btn6 {
-    width: 70px;
+    width: 100%;
+    max-width:70px ;
     height: 40px;
     margin-left: 2%;
     margin-top: 2%;
     float: left;
     display: none;
+}
+
+@media screen and (max-width: 400px){
+    .btn1 {
+        display: block;
+        width: 100%;
+        max-width:200px ;
+        height: 40px;
+        margin-left: 2%;
+        margin-top: 2%;
+        
+        display: none;
+    }
+    
+    .btn2 {
+        display: block;
+        width: 100%;
+        max-width:200px ;
+        height: 40px;
+        margin-left: 2%;
+        margin-top: 2%;
+        
+        display: none;
+    }
+    
+    .btn3 {
+        width: 100%;
+        max-width:200px ;
+        height: 40px;
+        margin-left: 2%;
+        margin-top: 2%;
+        
+        display: none;
+    }
+    
+    .btn4 {
+        width: 100%;
+        max-width:200px ;
+        height: 40px;
+        margin-left: 2%;
+        margin-top: 2%;
+        
+        display: none;
+    }
+    
+    .btn5 {
+        width: 100%;
+        max-width:200px ;
+        height: 40px;
+        margin-left: 2%;
+        margin-top: 2%;
+        
+        display: none;
+    }
+    
+    .btn6 {
+        width: 100%;
+        max-width:200px ;
+        height: 40px;
+        
+        margin-left: 2%;
+        margin-top: 2%;
+        
+        display: none;
+    }
 }
 
 .buyText1 {
