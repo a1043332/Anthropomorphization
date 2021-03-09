@@ -4,19 +4,28 @@ body {
 }
 
 .questionArea {
-    width: 1024px;
+    position: relative;
+    width: 100%;
     height: 668px;
+    max-width: 1024px;
+    max-height: 668px;
     background-color: #F8F8F8;
     /* border: 1px solid #000; */
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     margin: 0 auto;
     margin-top: 10px;
+    background-image: url("picture1.png");
+    background-size:280px 550px;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .pictureArea {
-    width: 720px;
+    width: 100%;
     height: 480px;
+    max-width: 720px;
+    min-height: 480px;
     margin: 0 auto;
     /* margin-top: 5%; */
     /* padding-top: 50px; */
@@ -60,8 +69,10 @@ body {
 }
 
 .answerArea {
-    width: 1024px;
+    width: 100%;
     height: 80px;
+    max-width: 1024px;
+    min-height: 80px;
     background-color: #FED18D;
     border: 1px solid #FED18D;
     border-bottom-left-radius: 10px;
@@ -86,8 +97,10 @@ body {
 }
 
 .textArea {
-    width: 750px;
-    height: 562px;
+    width: 100%;
+    height: 600px;
+    max-width: 280px;
+    min-height: 600px;
     margin: 0 auto;
     margin-top: 5%;
     padding-top: 50px;
@@ -110,19 +123,21 @@ body {
 }
 
 .recommendClass {
-    width: 720px;
+    position: absolute;
+    width: 269px;
     height: 150px;
-    background: #FFFFFF;
-    border: 1px solid #FFFFFF;
-    margin: 0 auto;
+    /* background: black; */
+    border: 0px solid #FFFFFF;
+    top: 150px;
+  
 }
 
 .recommendImg {
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
     float: left;
     margin-top: 2%;
-    margin-left: 5%;
+    margin-left: 0%;
 }
 
 .recommendImg2 {
@@ -142,10 +157,10 @@ body {
 }
 
 .recommendText {
-    padding-top: 5%;
-    padding-left: 25%;
-    width: 650px;
-    height: 100px;
+    padding-top: 0%;
+    padding-left: 26%;
+    width: 230px;
+    height: 120px;
     font-weight: bold;
     text-align: left;
     font-size: 16px;
@@ -330,8 +345,8 @@ body {
 .checkBox {
     float: left;
     height: 80px;
-    margin-top: 85px;
-    margin-left: 125px;
+    margin-top: -10px;
+    margin-left: 35px;
 }
 
 .interactive {
