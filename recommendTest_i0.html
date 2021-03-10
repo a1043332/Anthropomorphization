@@ -156,12 +156,13 @@
 
 
         }
-       // questionsNum = recommendList.length;
-       questionsNum = 6;
+        //questionsNum = recommendList.length;
+        questionsNum = 3;
         $(".buyText1").show(); $(".buyText2").show(); $(".btn1").show(); $(".btn2").show(); $(".btn3").show(); $(".btn4").show(); $(".btn5").show(); $(".btn6").show();
         var mainPicture = document.querySelector('.pictureArea');
-        //mainPicture.innerHTML = '<div class="interactive">根據剛剛和小艾的互動，您覺得小艾有多像真人？</div>';
-        mainPicture.innerHTML = '<div class="phone"><img src="pictures/i.png" alt="" class="icon"> <div class="iconTalk">小艾根據您的喜好，找到了這款商品，一定非常適合您。請問您有意願購買嗎？(,,・ω・,,) </div>  <div class="productPic"><img src="pic_only/computer/4.png" alt=""></div>  </div>';
+      //  mainPicture.innerHTML = '<div class="interactive">根據剛剛和小艾的互動，您覺得小艾有多像真人？</div>';
+      mainPicture.innerHTML = '<div class="phone"><img src="pictures/i.png" alt="" class="icon"> <div class="iconTalk">小艾根據您的喜好，找到了這款商品，想請問您喜歡嗎？如果不滿意，我會嘗試再找其他類型的商品給您ヽ(✿ﾟ▽ﾟ)ノ</div>  <div class="productPic"><img src="pic_only/computer/16.png" alt=""></div>  </div>';
+      
     }
 
 
@@ -220,11 +221,16 @@
         document.querySelector('.buyText1').innerHTML = '非常不想購買';
         document.querySelector('.buyText2').innerHTML = '非常想購買';
         var mainPicture = document.querySelector('.pictureArea');
-        if (questionsCount <= questionsNum) {
-            mainPicture.innerHTML = '<div class="phone"><img src="pictures/i.png" alt="" class="icon"> <div class="iconTalk">小艾根據您的喜好，找到了這款商品，一定非常適合您。請問您有意願購買嗎？</div>  <div class="productPic"><img src="pic_only/computer/'+questionsCount+'.png" alt=""></div>  </div>';
+        if (questionsCount <= (questionsNum-1)) {
+            mainPicture.innerHTML = '<div class="phone"><img src="pictures/i.png" alt="" class="icon"> <div class="iconTalk">小艾根據您的喜好，找到了這款商品，想請問您喜歡嗎？如果不滿意，我會嘗試再找其他類型的商品給您ヽ(✿ﾟ▽ﾟ)ノ </div>  <div class="productPic"><img src="pic_only/computer/'+questionsCount+'.png" alt=""></div>  </div>';
+        }
+        else if(questionsCount == questionsNum){
+            document.querySelector('.buyText1').innerHTML = '非常不像';
+        document.querySelector('.buyText2').innerHTML = '非常像';
+            mainPicture.innerHTML = '<div class="interactive">根據剛剛和小艾的互動，您覺得小艾有多像真人？</div>';
         }
         else {
-            window.location.href = "recommendTest_ai.html"
+            window.location.href = "introduction_ai.html"
         }
     }
     

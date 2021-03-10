@@ -24,6 +24,7 @@
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="main.js"></script>
     <script src="scriptAPP.js"></script>
+
     <title>Anthropomorphization Test Part2</title>
 </head>
 
@@ -34,15 +35,8 @@
     <!-- End Google Tag Manager (noscript) -->
     <div class="container">
         <div class="questionArea">
-            <!-- <div class="textTitle"></div> -->
-            <div class="pictureArea">
-                <div class="phone">
-                    <div class="iconTalk">小艾根據您的喜好，找到了這款商品，一定非常適合您。</div>
-                     
-                </div>
-                
-        </div>
-            
+            <!-- <div class="textTitle">您覺得AI助理像真人嗎？</div> -->
+            <div class="pictureArea"></div>
             <!-- <div class="pictureArea">
                
                 <img src="pictures/main1.png" class="mainPicture" alt=""> 
@@ -52,21 +46,21 @@
         <div class="answerArea">
             <!-- <button class="btn btn-success btnYes" name="btnYes" onclick="sayYes()">Yes</button>
             <button class="btn btn-danger btnNo" name="btnYes" onclick="sayNo()">No</button> -->
-            <div class="buyText1">非常不像</div>
-            <button class="btn btn-primary btn1" onclick="say1_1()">1</button>
-            <button class="btn btn-primary btn2" onclick="say1_2()">2</button>
-            <button class="btn btn-primary btn3" onclick="say1_3()">3</button>
-            <button class="btn btn-primary btn4" onclick="say1_4()">4</button>
-            <button class="btn btn-primary btn5" onclick="say1_5()">5</button>
-            <button class="btn btn-primary btn6" onclick="say1_6()">6</button>
-            <div class="buyText2">非常像</div>
+            <div class="buyText1">非常不想購買</div>
+            <button class="btn btn-primary btn1" onclick="say2(1)">1</button>
+            <button class="btn btn-primary btn2" onclick="say2(2)">2</button>
+            <button class="btn btn-primary btn3" onclick="say2(3)">3</button>
+            <button class="btn btn-primary btn4" onclick="say2(4)">4</button>
+            <button class="btn btn-primary btn5" onclick="say2(5)">5</button>
+            <button class="btn btn-primary btn6" onclick="say2(6)">6</button>
+            <div class="buyText2">非常想購買</div>
             <div class="clear"></div>
         </div>
     </div>
 </body>
 
 <script>
-     window.onload = function(){
+    window.onload = function(){
         window.document.documentElement.scrollTop=800;
     }
     var recommendList = []
@@ -77,17 +71,16 @@
     var computer = false;
     var accessory = false;
 
-
     var questionsNum;
     var picturesList = getRandomList(questionsNum);
     var questionsCount = 0;
     var yesCount = 0, noCount = 0;
     var btn1Count = 0, btn2Count = 0, btn3Count = 0, btn4Count = 0, btn5Count = 0, btn6Count = 0;
     window.onload = function () {
-        start1();
+        start2();
     };
 
-    function start1() {
+    function start2() {
         var falseRecommendList = []
         var falseRecommendListMax = []
         sport = getUrlParameter('sport');
@@ -163,45 +156,89 @@
 
 
         }
-        questionsNum = recommendList.length;
+       // questionsNum = recommendList.length;
+       questionsNum =3;
         $(".buyText1").show(); $(".buyText2").show(); $(".btn1").show(); $(".btn2").show(); $(".btn3").show(); $(".btn4").show(); $(".btn5").show(); $(".btn6").show();
         var mainPicture = document.querySelector('.pictureArea');
-        mainPicture.innerHTML = '<div class="interactive">根據剛剛和小艾的互動，您覺得小艾有多像真人？</div>';
+       // mainPicture.innerHTML = '<div class="interactive">根據剛剛和AI助理的互動，您覺得AI助理有多像真人？</div>';
+       mainPicture.innerHTML = '<div class="phone"><img src="pictures/ai.png" alt="" class="icon"> <div class="iconTalk">本系統利用您的偏好結合系統中的巨量資料，分析出以下結果，請問您喜歡以下產品嗎？</div>  <div class="productPic"><img src="pic_only/food/7.png" alt=""></div>  </div>';
     }
 
 
 
 
-    function say1_1() {
-        btn1Count++;
+    function say2(x) {
         questionsCount++;
+
         var ask = '非推薦題'
         if ((questionsCount - 2) >= 0) {
             ask = recommendList[questionsCount - 2] + '.png'
         }
-        localStorage.setItem('iPng' + String(questionsCount), ask);
-        localStorage.setItem('iAns' + String(questionsCount), '1');
-       // document.querySelector('.textTitle').innerHTML = '我依據您的喜好，我推薦給您以下商品';
+
+        switch (x){
+            case 1:
+            btn1Count++;
+            localStorage.setItem('aiPng' + String(questionsCount), ask);
+            localStorage.setItem('aiAns' + String(questionsCount), '1');
+            break;
+
+            case 2:
+            btn2Count++; 
+            localStorage.setItem('aiPng' + String(questionsCount), ask);
+            localStorage.setItem('aiAns' + String(questionsCount), '2');
+            break;  
+            
+            case 3:
+            btn3Count++;
+            localStorage.setItem('aiPng' + String(questionsCount), ask);
+            localStorage.setItem('aiAns' + String(questionsCount), '3'); 
+            break; 
+
+            case 4:
+            btn4Count++;
+            localStorage.setItem('aiPng' + String(questionsCount), ask);
+            localStorage.setItem('aiAns' + String(questionsCount), '4'); 
+            break; 
+
+            case 5:
+            btn5Count++;
+            localStorage.setItem('aiPng' + String(questionsCount), ask);
+            localStorage.setItem('aiAns' + String(questionsCount), '5'); 
+            break; 
+
+            case 6:
+            btn6Count++;
+            localStorage.setItem('aiPng' + String(questionsCount), ask);
+            localStorage.setItem('aiAns' + String(questionsCount), '6'); 
+            break; 
+        }
+       // document.querySelector('.textTitle').innerHTML = '<div class="recommendImg2"><img src="pictures/ai.png" class="recommenderPic" alt=""></div>根據您的過去資料，經演算法分析後，最適合您的商品是：';
         document.querySelector('.buyText1').innerHTML = '非常不想購買';
         document.querySelector('.buyText2').innerHTML = '非常想購買';
         var mainPicture = document.querySelector('.pictureArea');
-        if (questionsCount <= questionsNum) {
-            mainPicture.innerHTML = '<div class="phone"><img src="pictures/i.png" alt="" class="icon"> <div class="iconTalk">小艾根據您的喜好，找到了這款商品，一定非常適合您。請問您有意願購買嗎？</div>  <div class="productPic"><img src="1.png" alt=""></div>  </div>';
+        if (questionsCount <= (questionsNum-1)) {
+            mainPicture.innerHTML = '<div class="phone"><img src="pictures/ai.png" alt="" class="icon"> <div class="iconTalk">本系統利用您的偏好結合系統中的巨量資料，分析出以下結果，請問您喜歡以下產品嗎？</div>  <div class="productPic"><img src="pic_only/food/'+questionsCount+'.png" alt=""></div>  </div>';
+        }
+        else if (questionsCount == questionsNum){
+            document.querySelector('.buyText1').innerHTML = '非常不像';
+            document.querySelector('.buyText2').innerHTML = '非常像';
+            mainPicture.innerHTML = '<div class="interactive">根據剛剛和AI助理的互動，您覺得AI助理有多像真人？</div>';
         }
         else {
-            window.location.href = "introduction_ai.html"
+            window.location.href = "introduction_shin.html"
         }
+        
     }
-    function say1_2() {
+    function say2_2() {
         btn2Count++;
         questionsCount++;
         var ask = '非推薦題'
         if ((questionsCount - 2) >= 0) {
             ask = recommendList[questionsCount - 2] + '.png'
         }
-        localStorage.setItem('iPng' + String(questionsCount), ask);
-        localStorage.setItem('iAns' + String(questionsCount), '2');
-        document.querySelector('.textTitle').innerHTML = '<div class="recommendImg2"><img src="pictures/i.png" class="recommenderPic" alt=""></div>我依據您的喜好，我推薦給您以下商品';
+        localStorage.setItem('aiPng' + String(questionsCount), ask);
+        localStorage.setItem('aiAns' + String(questionsCount), '2');
+        document.querySelector('.textTitle').innerHTML = '<div class="recommendImg2"><img src="pictures/ai.png" class="recommenderPic" alt=""></div>根據您的過去資料，經演算法分析後，最適合您的商品是：';
         document.querySelector('.buyText1').innerHTML = '非常不想購買';
         document.querySelector('.buyText2').innerHTML = '非常想購買';
         var mainPicture = document.querySelector('.pictureArea');
@@ -209,19 +246,20 @@
             mainPicture.innerHTML = '<img src="pictures/' + recommendList[questionsCount - 1] + '.png" class="mainPicture" alt=""> ';
         }
         else {
-            window.location.href = "introduction_ai.html"
+
+            window.location.href = "introduction_shin.html"
         }
     }
-    function say1_3() {
+    function say2_3() {
         btn3Count++;
         questionsCount++;
         var ask = '非推薦題'
         if ((questionsCount - 2) >= 0) {
             ask = recommendList[questionsCount - 2] + '.png'
         }
-        localStorage.setItem('iPng' + String(questionsCount), ask);
-        localStorage.setItem('iAns' + String(questionsCount), '3');
-        document.querySelector('.textTitle').innerHTML = '<div class="recommendImg2"><img src="pictures/i.png" class="recommenderPic" alt=""></div>我依據您的喜好，我推薦給您以下商品';
+        localStorage.setItem('aiPng' + String(questionsCount), ask);
+        localStorage.setItem('aiAns' + String(questionsCount), '3');
+        document.querySelector('.textTitle').innerHTML = '<div class="recommendImg2"><img src="pictures/ai.png" class="recommenderPic" alt=""></div>根據您的過去資料，經演算法分析後，最適合您的商品是：';
         document.querySelector('.buyText1').innerHTML = '非常不想購買';
         document.querySelector('.buyText2').innerHTML = '非常想購買';
         var mainPicture = document.querySelector('.pictureArea');
@@ -229,19 +267,20 @@
             mainPicture.innerHTML = '<img src="pictures/' + recommendList[questionsCount - 1] + '.png" class="mainPicture" alt=""> ';
         }
         else {
-            window.location.href = "introduction_ai.html"
+
+            window.location.href = "introduction_shin.html"
         }
     }
-    function say1_4() {
+    function say2_4() {
         btn4Count++;
         questionsCount++;
         var ask = '非推薦題'
         if ((questionsCount - 2) >= 0) {
             ask = recommendList[questionsCount - 2] + '.png'
         }
-        localStorage.setItem('iPng' + String(questionsCount), ask);
-        localStorage.setItem('iAns' + String(questionsCount), '4');
-        document.querySelector('.textTitle').innerHTML = '<div class="recommendImg2"><img src="pictures/i.png" class="recommenderPic" alt=""></div>我依據您的喜好，推薦給您以下商品';
+        localStorage.setItem('aiPng' + String(questionsCount), ask);
+        localStorage.setItem('aiAns' + String(questionsCount), '4');
+        document.querySelector('.textTitle').innerHTML = '<div class="recommendImg2"><img src="pictures/ai.png" class="recommenderPic" alt=""></div>根據您的過去資料，經演算法分析後，最適合您的商品是：';
         document.querySelector('.buyText1').innerHTML = '非常不想購買';
         document.querySelector('.buyText2').innerHTML = '非常想購買';
         var mainPicture = document.querySelector('.pictureArea');
@@ -249,19 +288,20 @@
             mainPicture.innerHTML = '<img src="pictures/' + recommendList[questionsCount - 1] + '.png" class="mainPicture" alt=""> ';
         }
         else {
-            window.location.href = "introduction_ai.html"
+
+            window.location.href = "introduction_shin.html"
         }
     }
-    function say1_5() {
+    function say2_5() {
         btn5Count++;
         questionsCount++;
         var ask = '非推薦題'
         if ((questionsCount - 2) >= 0) {
             ask = recommendList[questionsCount - 2] + '.png'
         }
-        localStorage.setItem('iPng' + String(questionsCount), ask);
-        localStorage.setItem('iAns' + String(questionsCount), '5');
-        document.querySelector('.textTitle').innerHTML = '<div class="recommendImg2"><img src="pictures/i.png" class="recommenderPic" alt=""></div>我依據您的喜好，推薦給您以下商品';
+        localStorage.setItem('aiPng' + String(questionsCount), ask);
+        localStorage.setItem('aiAns' + String(questionsCount), '5');
+        document.querySelector('.textTitle').innerHTML = '<div class="recommendImg2"><img src="pictures/ai.png" class="recommenderPic" alt=""></div>根據您的過去資料，經演算法分析後，最適合您的商品是：';
         document.querySelector('.buyText1').innerHTML = '非常不想購買';
         document.querySelector('.buyText2').innerHTML = '非常想購買';
         var mainPicture = document.querySelector('.pictureArea');
@@ -269,19 +309,20 @@
             mainPicture.innerHTML = '<img src="pictures/' + recommendList[questionsCount - 1] + '.png" class="mainPicture" alt=""> ';
         }
         else {
-            window.location.href = "introduction_ai.html"
+
+            window.location.href = "introduction_shin.html"
         }
     }
-    function say1_6() {
+    function say2_6() {
         btn6Count++;
         questionsCount++;
         var ask = '非推薦題'
         if ((questionsCount - 2) >= 0) {
             ask = recommendList[questionsCount - 2] + '.png'
         }
-        localStorage.setItem('iPng' + String(questionsCount), ask);
-        localStorage.setItem('iAns' + String(questionsCount), '6');
-        document.querySelector('.textTitle').innerHTML = '<div class="recommendImg2"><img src="pictures/i.png" class="recommenderPic" alt=""></div>我依據您的喜好，推薦給您以下商品：';
+        localStorage.setItem('aiPng' + String(questionsCount), ask);
+        localStorage.setItem('aiAns' + String(questionsCount), '6');
+        document.querySelector('.textTitle').innerHTML = '<div class="recommendImg2"><img src="pictures/ai.png" class="recommenderPic" alt=""></div>根據您的過去資料，經演算法分析後，最適合您的商品是：';
         document.querySelector('.buyText1').innerHTML = '非常不想購買';
         document.querySelector('.buyText2').innerHTML = '非常想購買';
         var mainPicture = document.querySelector('.pictureArea');
@@ -290,10 +331,10 @@
         }
         else {
 
-            window.location.href = "introduction_ai.html"
+            window.location.href = "introduction_shin.html"
+
         }
     }
-
 
 
 

@@ -35,7 +35,7 @@
     <!-- End Google Tag Manager (noscript) -->
     <div class="container">
         <div class="questionArea">
-            <!-- <div class="textTitle">您覺得AI助理像真人嗎？</div> -->
+            <!-- <div class="textTitle">您覺得欣欣商城的熱銷推薦系統像真人嗎？</div> -->
             <div class="pictureArea"></div>
             <!-- <div class="pictureArea">
                
@@ -47,12 +47,12 @@
             <!-- <button class="btn btn-success btnYes" name="btnYes" onclick="sayYes()">Yes</button>
             <button class="btn btn-danger btnNo" name="btnYes" onclick="sayNo()">No</button> -->
             <div class="buyText1">非常不想購買</div>
-            <button class="btn btn-primary btn1" onclick="say2(1)">1</button>
-            <button class="btn btn-primary btn2" onclick="say2(2)">2</button>
-            <button class="btn btn-primary btn3" onclick="say2(3)">3</button>
-            <button class="btn btn-primary btn4" onclick="say2(4)">4</button>
-            <button class="btn btn-primary btn5" onclick="say2(5)">5</button>
-            <button class="btn btn-primary btn6" onclick="say2(6)">6</button>
+            <button class="btn btn-primary btn1" onclick="say3(1)">1</button>
+            <button class="btn btn-primary btn2" onclick="say3(2)">2</button>
+            <button class="btn btn-primary btn3" onclick="say3(3)">3</button>
+            <button class="btn btn-primary btn4" onclick="say3(4)">4</button>
+            <button class="btn btn-primary btn5" onclick="say3(5)">5</button>
+            <button class="btn btn-primary btn6" onclick="say3(6)">6</button>
             <div class="buyText2">非常想購買</div>
             <div class="clear"></div>
         </div>
@@ -60,7 +60,7 @@
 </body>
 
 <script>
-    window.onload = function(){
+     window.onload = function(){
         window.document.documentElement.scrollTop=800;
     }
     var recommendList = []
@@ -77,10 +77,10 @@
     var yesCount = 0, noCount = 0;
     var btn1Count = 0, btn2Count = 0, btn3Count = 0, btn4Count = 0, btn5Count = 0, btn6Count = 0;
     window.onload = function () {
-        start2();
+        start3();
     };
 
-    function start2() {
+    function start3() {
         var falseRecommendList = []
         var falseRecommendListMax = []
         sport = getUrlParameter('sport');
@@ -156,105 +156,112 @@
 
 
         }
-       // questionsNum = recommendList.length;
-       questionsNum = 6;
+     //   questionsNum = recommendList.length;
+questionsNum =3;
         $(".buyText1").show(); $(".buyText2").show(); $(".btn1").show(); $(".btn2").show(); $(".btn3").show(); $(".btn4").show(); $(".btn5").show(); $(".btn6").show();
         var mainPicture = document.querySelector('.pictureArea');
-     //   mainPicture.innerHTML = '<div class="interactive">根據剛剛和AI助理的互動，您覺得AI助理有多像真人？</div>';
-     mainPicture.innerHTML = '<div class="phone"><img src="pictures/ai.png" alt="" class="icon"> <div class="iconTalk">系統已經根據您的喜好，找出最符合您的產品，請問您想購買嗎？</div>  <div class="productPic"><img src="pic_only/food/4.png" alt=""></div>  </div>';
+     //   mainPicture.innerHTML = '<div class="interactive">依據欣欣推薦系統的介紹，您覺得欣欣推薦系統有多像真人？</div>';
+     mainPicture.innerHTML = '<div class="phone"><img src="pictures/shin.png" alt="" class="icon"> <div class="iconTalk">欣欣購物平台推薦此特賣商品給您，請問您想購買嗎？</div>  <div class="productPic"><img src="pic_only/sport/9.png" alt=""></div>  </div>';
     }
 
 
 
 
-    function say2(x) {
+    function say3(x) {
         questionsCount++;
 
         var ask = '非推薦題'
         if ((questionsCount - 2) >= 0) {
             ask = recommendList[questionsCount - 2] + '.png'
         }
-
+        
         switch (x){
             case 1:
             btn1Count++;
-            localStorage.setItem('aiPng' + String(questionsCount), ask);
-            localStorage.setItem('aiAns' + String(questionsCount), '1');
+            localStorage.setItem('shinPng' + String(questionsCount), ask);
+            localStorage.setItem('shinAns' + String(questionsCount), '1');
             break;
 
             case 2:
-            btn2Count++; 
-            localStorage.setItem('aiPng' + String(questionsCount), ask);
-            localStorage.setItem('aiAns' + String(questionsCount), '2');
+            btn2Count++;
+            localStorage.setItem('shinPng' + String(questionsCount), ask);
+            localStorage.setItem('shinAns' + String(questionsCount), '2'); 
             break;  
             
             case 3:
             btn3Count++;
-            localStorage.setItem('aiPng' + String(questionsCount), ask);
-            localStorage.setItem('aiAns' + String(questionsCount), '3'); 
+            localStorage.setItem('shinPng' + String(questionsCount), ask);
+            localStorage.setItem('shinAns' + String(questionsCount), '3'); 
             break; 
 
             case 4:
             btn4Count++;
-            localStorage.setItem('aiPng' + String(questionsCount), ask);
-            localStorage.setItem('aiAns' + String(questionsCount), '4'); 
+            localStorage.setItem('shinPng' + String(questionsCount), ask);
+            localStorage.setItem('shinAns' + String(questionsCount), '4'); 
             break; 
 
             case 5:
             btn5Count++;
-            localStorage.setItem('aiPng' + String(questionsCount), ask);
-            localStorage.setItem('aiAns' + String(questionsCount), '5'); 
+            localStorage.setItem('shinPng' + String(questionsCount), ask);
+            localStorage.setItem('shinAns' + String(questionsCount), '5'); 
             break; 
 
             case 6:
-            btn6Count++;
-            localStorage.setItem('aiPng' + String(questionsCount), ask);
-            localStorage.setItem('aiAns' + String(questionsCount), '6'); 
+            btn6Count++; 
+            localStorage.setItem('shinPng' + String(questionsCount), ask);
+            localStorage.setItem('shinAns' + String(questionsCount), '6');
             break; 
         }
-       // document.querySelector('.textTitle').innerHTML = '<div class="recommendImg2"><img src="pictures/ai.png" class="recommenderPic" alt=""></div>根據您的過去資料，經演算法分析後，最適合您的商品是：';
+
+
+       // document.querySelector('.textTitle').innerHTML = '以下是我們的精選熱銷商品，推薦給您';
         document.querySelector('.buyText1').innerHTML = '非常不想購買';
         document.querySelector('.buyText2').innerHTML = '非常想購買';
         var mainPicture = document.querySelector('.pictureArea');
-        if (questionsCount <= questionsNum) {
-            mainPicture.innerHTML = '<div class="phone"><img src="pictures/ai.png" alt="" class="icon"> <div class="iconTalk">系統根據您的喜好，為您找出以下商品，請問您想購買嗎？</div>  <div class="productPic"><img src="pic_only/food/'+questionsCount+'.png" alt=""></div>  </div>';
+        if (questionsCount <= (questionsNum-1)) {
+            mainPicture.innerHTML = '<div class="phone"><img src="pictures/shin.png" alt="" class="icon"> <div class="iconTalk">欣欣購物平台推薦此特賣商品給您，請問您想購買嗎？</div>  <div class="productPic"><img src="pic_only/sport/'+questionsCount+'.png" alt=""></div>  </div>';
+        }
+        else if (questionsCount == questionsNum){
+            document.querySelector('.buyText1').innerHTML = '非常不像';
+        document.querySelector('.buyText2').innerHTML = '非常像';
+            mainPicture.innerHTML = '<div class="interactive">依據欣欣推薦系統的介紹，您覺得欣欣推薦系統有多像真人？</div>';
         }
         else {
-            window.location.href = "recommendTest_shin.html"
+           // sendSheet3(callbackFn)
+            window.location.href = "recommendTest_i.html"
         }
-        
     }
-    function say2_2() {
+    function say3_2() {
         btn2Count++;
         questionsCount++;
         var ask = '非推薦題'
         if ((questionsCount - 2) >= 0) {
             ask = recommendList[questionsCount - 2] + '.png'
         }
-        localStorage.setItem('aiPng' + String(questionsCount), ask);
-        localStorage.setItem('aiAns' + String(questionsCount), '2');
-        document.querySelector('.textTitle').innerHTML = '<div class="recommendImg2"><img src="pictures/ai.png" class="recommenderPic" alt=""></div>根據您的過去資料，經演算法分析後，最適合您的商品是：';
+        localStorage.setItem('shinPng' + String(questionsCount), ask);
+        localStorage.setItem('shinAns' + String(questionsCount), '2');
+       // document.querySelector('.textTitle').innerHTML = '以下是我們的精選熱銷商品，推薦給您';
         document.querySelector('.buyText1').innerHTML = '非常不想購買';
         document.querySelector('.buyText2').innerHTML = '非常想購買';
         var mainPicture = document.querySelector('.pictureArea');
         if (questionsCount <= questionsNum) {
-            mainPicture.innerHTML = '<img src="pictures/' + recommendList[questionsCount - 1] + '.png" class="mainPicture" alt=""> ';
+            mainPicture.innerHTML = '<div class="phone"><img src="pictures/shin.png" alt="" class="icon"> <div class="iconTalk">欣欣購物平台推薦此特賣商品給您，請問您想購買嗎？</div>  <div class="productPic"><img src="pic_only/sport/'+questionsCount+'.png" alt=""></div>  </div>';
         }
         else {
-
-            window.location.href = "introduction_shin.html"
+            sendSheet3(callbackFn)
+          //  window.location.href = "thanks.html"
         }
     }
-    function say2_3() {
+    function say3_3() {
         btn3Count++;
         questionsCount++;
         var ask = '非推薦題'
         if ((questionsCount - 2) >= 0) {
             ask = recommendList[questionsCount - 2] + '.png'
         }
-        localStorage.setItem('aiPng' + String(questionsCount), ask);
-        localStorage.setItem('aiAns' + String(questionsCount), '3');
-        document.querySelector('.textTitle').innerHTML = '<div class="recommendImg2"><img src="pictures/ai.png" class="recommenderPic" alt=""></div>根據您的過去資料，經演算法分析後，最適合您的商品是：';
+        localStorage.setItem('shinPng' + String(questionsCount), ask);
+        localStorage.setItem('shinAns' + String(questionsCount), '3');
+        document.querySelector('.textTitle').innerHTML = '以下是我們的精選熱銷商品，推薦給您';
         document.querySelector('.buyText1').innerHTML = '非常不想購買';
         document.querySelector('.buyText2').innerHTML = '非常想購買';
         var mainPicture = document.querySelector('.pictureArea');
@@ -262,20 +269,20 @@
             mainPicture.innerHTML = '<img src="pictures/' + recommendList[questionsCount - 1] + '.png" class="mainPicture" alt=""> ';
         }
         else {
-
-            window.location.href = "introduction_shin.html"
+            sendSheet3(callbackFn)
+          //  window.location.href = "thanks.html"
         }
     }
-    function say2_4() {
+    function say3_4() {
         btn4Count++;
         questionsCount++;
         var ask = '非推薦題'
         if ((questionsCount - 2) >= 0) {
             ask = recommendList[questionsCount - 2] + '.png'
         }
-        localStorage.setItem('aiPng' + String(questionsCount), ask);
-        localStorage.setItem('aiAns' + String(questionsCount), '4');
-        document.querySelector('.textTitle').innerHTML = '<div class="recommendImg2"><img src="pictures/ai.png" class="recommenderPic" alt=""></div>根據您的過去資料，經演算法分析後，最適合您的商品是：';
+        localStorage.setItem('shinPng' + String(questionsCount), ask);
+        localStorage.setItem('shinAns' + String(questionsCount), '4');
+        document.querySelector('.textTitle').innerHTML = '以下是我們的精選熱銷商品，推薦給您';
         document.querySelector('.buyText1').innerHTML = '非常不想購買';
         document.querySelector('.buyText2').innerHTML = '非常想購買';
         var mainPicture = document.querySelector('.pictureArea');
@@ -283,20 +290,20 @@
             mainPicture.innerHTML = '<img src="pictures/' + recommendList[questionsCount - 1] + '.png" class="mainPicture" alt=""> ';
         }
         else {
-
-            window.location.href = "introduction_shin.html"
+            sendSheet3(callbackFn)
+          //  window.location.href = "thanks.html"
         }
     }
-    function say2_5() {
+    function say3_5() {
         btn5Count++;
         questionsCount++;
         var ask = '非推薦題'
         if ((questionsCount - 2) >= 0) {
             ask = recommendList[questionsCount - 2] + '.png'
         }
-        localStorage.setItem('aiPng' + String(questionsCount), ask);
-        localStorage.setItem('aiAns' + String(questionsCount), '5');
-        document.querySelector('.textTitle').innerHTML = '<div class="recommendImg2"><img src="pictures/ai.png" class="recommenderPic" alt=""></div>根據您的過去資料，經演算法分析後，最適合您的商品是：';
+        localStorage.setItem('shinPng' + String(questionsCount), ask);
+        localStorage.setItem('shinAns' + String(questionsCount), '5');
+        document.querySelector('.textTitle').innerHTML = '以下是我們的精選熱銷商品，推薦給您';
         document.querySelector('.buyText1').innerHTML = '非常不想購買';
         document.querySelector('.buyText2').innerHTML = '非常想購買';
         var mainPicture = document.querySelector('.pictureArea');
@@ -304,20 +311,20 @@
             mainPicture.innerHTML = '<img src="pictures/' + recommendList[questionsCount - 1] + '.png" class="mainPicture" alt=""> ';
         }
         else {
-
-            window.location.href = "introduction_shin.html"
+            sendSheet3(callbackFn)
+          //  window.location.href = "thanks.html"
         }
     }
-    function say2_6() {
+    function say3_6() {
         btn6Count++;
         questionsCount++;
         var ask = '非推薦題'
         if ((questionsCount - 2) >= 0) {
             ask = recommendList[questionsCount - 2] + '.png'
         }
-        localStorage.setItem('aiPng' + String(questionsCount), ask);
-        localStorage.setItem('aiAns' + String(questionsCount), '6');
-        document.querySelector('.textTitle').innerHTML = '<div class="recommendImg2"><img src="pictures/ai.png" class="recommenderPic" alt=""></div>根據您的過去資料，經演算法分析後，最適合您的商品是：';
+        localStorage.setItem('shinPng' + String(questionsCount), ask);
+        localStorage.setItem('shinAns' + String(questionsCount), '6');
+        document.querySelector('.textTitle').innerHTML = '以下是我們的精選熱銷商品，推薦給您';
         document.querySelector('.buyText1').innerHTML = '非常不想購買';
         document.querySelector('.buyText2').innerHTML = '非常想購買';
         var mainPicture = document.querySelector('.pictureArea');
@@ -325,12 +332,14 @@
             mainPicture.innerHTML = '<img src="pictures/' + recommendList[questionsCount - 1] + '.png" class="mainPicture" alt=""> ';
         }
         else {
-
-            window.location.href = "introduction_shin.html"
-
+            sendSheet3(callbackFn)
+          //  window.location.href = "thanks.html"
         }
     }
-
+ 
+        function callbackFn(){
+            window.location.href = "thanks.html";
+        }
 
 
 
